@@ -1,0 +1,15 @@
+.trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+}
+.antd-pro-components-global-header-index-right {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    background: red;
+    width: 200px;
+    margin-right: 16px;
+}
