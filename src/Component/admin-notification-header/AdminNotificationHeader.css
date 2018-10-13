@@ -1,0 +1,20 @@
+.antd-pro-components-notice-icon-index-noticeButton {
+    cursor: pointer;
+    padding: 0px 12px;
+    display: inline-block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    height: 100%;
+    margin-right: 20px;
+}
+.antd-pro-components-notice-icon-index-noticeButton:hover{
+    background: rgba(0,0,0,.025);
+}
+
+.outlined-noticeButton-header {
+padding: 4px
+}
+
+.antd-pro-damnx-popover-notification {
+    /* width: 320px; */
+}

@@ -9,7 +9,12 @@
     float: right;
     height: 100%;
     overflow: hidden;
-    background: red;
-    width: 200px;
     margin-right: 16px;
 }
+
+.antd-pro-damnx-header{
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    padding: 0px;
+}
+
