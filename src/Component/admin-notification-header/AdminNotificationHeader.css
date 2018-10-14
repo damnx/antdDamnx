@@ -1,6 +1,6 @@
 .antd-pro-components-notice-icon-index-noticeButton {
     cursor: pointer;
-    padding: 0px 12px;
+    padding: 0px 20px;
     display: inline-block;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -16,5 +16,15 @@ padding: 4px
 }
 
 .antd-pro-damnx-popover-notification {
-    /* width: 320px; */
+    width: 320px;
+}
+.antd-pro-damnx-popover-notification .ant-popover-inner-content {
+    padding: 12px 10px;
+}
+
+.antd-pro-components-global-header-index-right {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 16px;
 }

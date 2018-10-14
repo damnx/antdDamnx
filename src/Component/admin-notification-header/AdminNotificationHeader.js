@@ -1,42 +1,95 @@
 import React, { Component } from 'react';
 import { Icon, Badge, Popover } from 'antd';
 import './AdminNotificationHeader.css'
+import ContentPopoverAdminHeader from '../content-popover-admin-header';
+import { notification } from '../../Api';
 
-const text = <span>Title</span>;
-const content = (
-    <div>
-        <p>Content</p>
-        <p>Content</p>
-    </div>
-);
-
-
+const text = ({ data }) => {
+    return;
+}
+const content = () => {
+    return
+}
 class AdminNotificationHeader extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            data: {},
+            isLoading: false
+        }
+    }
 
+    componentWillMount() {
+        this.callApiNotification()
     }
 
     render() {
+        let { isLoading, data } = this.state;
         return (
-            <span className='antd-pro-components-notice-icon-index-noticeButton'>
-                <Popover
-                    placement="topRight"
-                    title={text}
-                    content={content}
-                    trigger="click"
-                    className='antd-pro-damnx-popover-notification'
-                >
-                    <Badge
-                        count={99}
-                        overflowCount={10}
-                        className='ant-damnx-badge'
+            <div className='antd-pro-components-global-header-index-right'>
+                <span className='antd-pro-components-notice-icon-index-noticeButton'>
+                    <Popover
+                        placement="topRight"
+                        trigger="click"
+                        overlayClassName='antd-pro-damnx-popover-notification'
+                        content={
+                            <ContentPopoverAdminHeader
+                                data={data}
+                                isLoading={isLoading}
+                                onClear={this.onClear}
+
+                            />
+                        }
                     >
-                        <Icon className='outlined-noticeButton-header' type="bell" theme="outlined" />
-                    </Badge>
-                </Popover>
-            </span>
+                        <Badge
+                            count={99}
+                            overflowCount={10}
+                            className='ant-damnx-badge'
+                            onClick={this.onClick}
+                        >
+                            <Icon className='outlined-noticeButton-header' type="bell" theme="outlined" />
+                        </Badge>
+                    </Popover>
+                </span>
+            </div>
         );
+    }
+
+    onClick = () => {
+        this.callApiNotification();
+    }
+
+    /**
+     * clear thông báo 
+     * input activeKey string
+     * output xóa data tab
+     */
+    onClear = (activeKey) => {
+        let data = this.state.data;
+        delete data[activeKey];
+        this.setState({
+            ...this.state,
+            data: data
+        })
+    }
+
+    callApiNotification = () => {
+        this.setState({
+            isLoading: true,
+        })
+
+        notification().then(res => {
+            if (res.status === 200) {
+                this.setState({
+                    isLoading: false,
+                    data: {
+                        '1': res.data,
+                        '2': res.data
+                    }
+                })
+            }
+        });
+
     }
 }
 

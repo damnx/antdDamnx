@@ -24,9 +24,7 @@ class HeaderAdmin extends Component {
                     type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
                     onClick={this.toggle}
                 />
-                <div className='antd-pro-components-global-header-index-right'>
-                    <AdminNotificationHeader />
-                </div>
+                <AdminNotificationHeader />
             </Header>
         );
     }
