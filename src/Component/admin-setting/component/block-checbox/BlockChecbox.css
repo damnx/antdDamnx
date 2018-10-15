@@ -1,0 +1,19 @@
+.antd-damnx-components-setting-drawer-index-item {
+    margin-right: 16px;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+.antd-damnx-components-setting-drawer-index-selectIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 24px;
+    height: 100%;
+    color: #1890ff;
+    font-size: 14px;
+    font-weight: 700;
+}

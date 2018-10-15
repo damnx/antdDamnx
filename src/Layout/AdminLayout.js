@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import HeaderAdmin from './HeaderAdmin';
 import FooterAdmin from './FooterAdmin';
 import SiderAdmin from './SiderAdmin';
+import AdminSetting from '../Component/admin-setting'
 
 const { Content } = Layout;
 
@@ -12,6 +13,19 @@ const AdminLayout = (Component) => {
             super(props);
             this.state = {
                 collapsed: false,
+                visible: false,
+                blockChecbox: [
+                    {
+                        'image': 'https://gw.alipayobjects.com/zos/rmsportal/LCkqqYNmvBEbokSDscrm.svg',
+                        'title': 'Dark style',
+                        'check': true
+                    },
+                    {
+                        'image': 'https://gw.alipayobjects.com/zos/rmsportal/jpRkZQMyYRryryPNtyIC.svg',
+                        'title': 'Light style',
+                        'check': false
+                    }
+                ]
             };
         }
 
@@ -22,16 +36,17 @@ const AdminLayout = (Component) => {
         }
 
         render() {
+            let { collapsed, visible, blockChecbox } = this.state;
             return (
                 <div>
                     <Layout>
                         <SiderAdmin
-                            collapsed={this.state.collapsed}
+                            collapsed={collapsed}
                             onClickToggle={this.onClickToggle}
                         />
                         <Layout>
                             <HeaderAdmin
-                                collapsed={this.state.collapsed}
+                                collapsed={collapsed}
                                 onClickToggle={this.onClickToggle}
                             />
                             <Content
@@ -46,8 +61,19 @@ const AdminLayout = (Component) => {
                             />
                         </Layout>
                     </Layout>
+                    <AdminSetting
+                        visible={visible}
+                        showDrawer={this.showDrawer}
+                        blockChecbox={blockChecbox}
+                    />
                 </div>
             )
+        }
+
+        showDrawer = (visible) => {
+            this.setState({
+                visible
+            })
         }
     }
 }

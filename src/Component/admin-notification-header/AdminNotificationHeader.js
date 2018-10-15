@@ -26,32 +26,30 @@ class AdminNotificationHeader extends Component {
     render() {
         let { isLoading, data } = this.state;
         return (
-            <div className='antd-pro-components-global-header-index-right'>
-                <span className='antd-pro-components-notice-icon-index-noticeButton'>
-                    <Popover
-                        placement="topRight"
-                        trigger="click"
-                        overlayClassName='antd-pro-damnx-popover-notification'
-                        content={
-                            <ContentPopoverAdminHeader
-                                data={data}
-                                isLoading={isLoading}
-                                onClear={this.onClear}
+            <span className='antd-pro-components-notice-icon-index-noticeButton'>
+                <Popover
+                    placement="topRight"
+                    trigger="click"
+                    overlayClassName='antd-pro-damnx-popover-notification'
+                    content={
+                        <ContentPopoverAdminHeader
+                            data={data}
+                            isLoading={isLoading}
+                            onClear={this.onClear}
 
-                            />
-                        }
+                        />
+                    }
+                >
+                    <Badge
+                        count={99}
+                        overflowCount={10}
+                        className='ant-damnx-badge'
+                        onClick={this.onClick}
                     >
-                        <Badge
-                            count={99}
-                            overflowCount={10}
-                            className='ant-damnx-badge'
-                            onClick={this.onClick}
-                        >
-                            <Icon className='outlined-noticeButton-header' type="bell" theme="outlined" />
-                        </Badge>
-                    </Popover>
-                </span>
-            </div>
+                        <Icon className='outlined-noticeButton-header' type="bell" theme="outlined" />
+                    </Badge>
+                </Popover>
+            </span>
         );
     }
 

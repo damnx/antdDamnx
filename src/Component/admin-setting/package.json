@@ -1,0 +1,7 @@
+{
+    "name": "AdminSetting",
+    "version": "1.0.2",
+    "private": true,
+    "main": "./AdminSetting.js"
+  }
+  

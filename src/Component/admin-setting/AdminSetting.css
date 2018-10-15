@@ -1,0 +1,28 @@
+.antd-damnx-components-setting-drawer-index-handle {
+    position: absolute;
+    top: 240px;
+    background: #1890ff;
+    width: 48px;
+    height: 48px;
+    right: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 0;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+}
+.antd-damnx-components-setting-drawer-index-content {
+    min-height: 100%;
+    background: #fff;
+    position: relative;
+}
+.antd-damnx-setting-drawer-index-content-page-style-setting {
+    font-size: 14px;
+    color: rgba(0,0,0,.85);
+    line-height: 22px;
+    margin-bottom: 12px;
+}

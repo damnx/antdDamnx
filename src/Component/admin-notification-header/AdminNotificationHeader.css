@@ -1,11 +1,12 @@
 .antd-pro-components-notice-icon-index-noticeButton {
     cursor: pointer;
-    padding: 0px 20px;
+    padding: 10px 20px 10px 5px;
     display: inline-block;
     -webkit-transition: all .3s;
     transition: all .3s;
     height: 100%;
-    margin-right: 20px;
+    margin-right: 10px;
+    float: left;
 }
 .antd-pro-components-notice-icon-index-noticeButton:hover{
     background: rgba(0,0,0,.025);
@@ -22,9 +23,6 @@ padding: 4px
     padding: 12px 10px;
 }
 
-.antd-pro-components-global-header-index-right {
-    float: right;
-    height: 100%;
-    overflow: hidden;
-    margin-right: 16px;
+.ant-damnx-badge .ant-badge-count{
+    font-size: 10px;
 }

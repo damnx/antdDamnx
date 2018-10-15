@@ -14,3 +14,10 @@
     overflow: hidden;
 }
 
+
+.antd-pro-components-global-header-index-right {
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 16px;
+}
