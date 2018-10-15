@@ -18,17 +18,17 @@ class BlockChecbox extends Component {
     }
 
     renderBlockChecbox = () => {
-        let blockChecbox = this.props.blockChecbox;
+        let {blockChecbox,data} = this.props
         let result = [];
-        for (let i in blockChecbox) {
+        for (let i in data) {
             result.push(
-                <Tooltip key={i} placement="top" title={blockChecbox[i].title}>
+                <Tooltip key={i} placement="top" title={data[i].title}>
                     <div className='antd-damnx-components-setting-drawer-index-item' onClick={() => this.onClick(i)}>
-                        <img src={blockChecbox[i].image} />
+                        <img src={data[i].image} />
                         <div
                             className='antd-damnx-components-setting-drawer-index-selectIcon'
                         >
-                            <Icon type={blockChecbox[i].check ? 'check' : 'none'} />
+                            <Icon type={data[i].name === blockChecbox ? 'check' : 'none'} />
                         </div>
                     </div>
                 </Tooltip>
@@ -39,7 +39,7 @@ class BlockChecbox extends Component {
     }
 
     onClick = (i) => {
-        
+        this.props.onClickBlockChecbox(i)
     }
 }
 
