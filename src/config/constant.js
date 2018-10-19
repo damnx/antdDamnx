@@ -11,10 +11,10 @@ export const BLOCK_CHECBOX = {
     }
 }
 export const NAVIGATION_MODE = {
-    'sideMenu': {
+    'siderMenu': {
         'image': 'https://gw.alipayobjects.com/zos/rmsportal/JopDzEhOqwOjeNTXkoje.svg',
         'title': 'Side Menu Layout',
-        'name': 'sideMenu'
+        'name': 'siderMenu'
     },
     'topMenu': {
         'image': 'https://gw.alipayobjects.com/zos/rmsportal/KDNDBbriJhLwuqMoxcAr.svg',

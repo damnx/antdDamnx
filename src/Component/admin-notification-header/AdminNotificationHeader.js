@@ -20,7 +20,14 @@ class AdminNotificationHeader extends Component {
     }
 
     componentWillMount() {
-        this.callApiNotification()
+        // this.callApiNotification()
+    }
+
+    componentWillUnmount() {
+        // this.setState({
+        //     ...this.state,
+        //     data: {}
+        // })
     }
 
     render() {
