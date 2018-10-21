@@ -6,10 +6,17 @@
     position: relative;
 }
 
+.antd-damnx-components-header-index-header-mobile {
+    float: left;
+}
+
 .antd-damnx-components-header-index-trigger {
     font-size: 20px;
     height: 64px;
     cursor: pointer;
     transition: all .3s,padding 0s;
     padding: 22px 24px;
+}
+.antd-damnx-components-top-nav-header-index-logo-mobile {
+    float: left;
 }

@@ -3,7 +3,7 @@ import { Layout ,Menu} from 'antd';
 import HeaderAdmin from './HeaderAdmin';
 import FooterAdmin from './FooterAdmin';
 import SiderAdmin from './SiderAdmin';
-import AdminSetting from '../Component/admin-setting';
+import AdminSetting from '../Component/admin-setting/AdminSetting';
 import LocalStorage from '../utils/LocalStorage';
 
 // const { Content } = Layout;
@@ -16,7 +16,7 @@ const AdminLayout = (Component) => {
             this.state = {
                 collapsed: false,
                 visible: false,
-                navigationMode: LocalStorage.get('navigationMode') ? LocalStorage.get('navigationMode') : 'sideMenu'
+                navigationMode: LocalStorage.get('navigationMode') ? LocalStorage.get('navigationMode') : 'sidesMenu'
             };
         }
 
@@ -30,7 +30,7 @@ const AdminLayout = (Component) => {
             let { collapsed, visible, navigationMode } = this.state;
             return (
                 <div>
-                    {navigationMode === 'sideMenu' ? this.renderSideMenuLayou(collapsed, visible, navigationMode) : this.renderTopMenuLayou(collapsed, visible, navigationMode)}
+                    {navigationMode === 'sidesMenu' ? this.renderSideMenuLayou(collapsed, visible, navigationMode) : this.renderTopMenuLayou(collapsed, visible, navigationMode)}
                     {this.renderAdminSetting(visible, navigationMode)}
                 </div>
             )

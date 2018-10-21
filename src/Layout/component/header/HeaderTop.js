@@ -12,7 +12,7 @@ class HeaderTop extends Component {
         super(props);
     }
     render() {
-        let { navigationMode, collapsed } = this.props;
+        let { navigationMode, collapsed, isMobile } = this.props;
         return (
             <Header style={{ background: '' }} className="header" id="ant-damnx-header">
                 <div className={navigationMode === 'topMenu' ? "antd-damnx-components-top-nav-header-index-left" : 'antd-damnx-components-top-header-index-left'}>
@@ -20,19 +20,22 @@ class HeaderTop extends Component {
                         navigationMode={navigationMode}
                         collapsed={collapsed}
                         onClick={() => this.toggle(!collapsed)}
+                        isMobile={isMobile}
                     />
                     <LogoNavMenu
                         navigationMode={navigationMode}
+                        isMobile={isMobile}
                     />
 
-                    {this.renderSubberMenu(navigationMode)}
+                    {this.renderSubberMenu(navigationMode, isMobile)}
+                    
                 </div>
             </Header >
         );
     }
 
-    renderSubberMenu = (navigationMode) => {
-        if (navigationMode === 'topMenu') {
+    renderSubberMenu = (navigationMode,isMobile) => {
+        if (navigationMode === 'topMenu' && !isMobile) {
             return (
                 <SubberMenu
                     mode='horizontal'

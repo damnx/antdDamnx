@@ -4,7 +4,7 @@ import nav from './_nav';
 import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
-
+let currentMenu=[];
 const getMenus = (nav, pathname) => {
     return nav.map((item) => {
         if (item.children) {
@@ -24,6 +24,9 @@ const getMenus = (nav, pathname) => {
                 </SubMenu>
             )
         } 
+        if (item.route === pathname) {
+            currentMenu[0] = item.id
+        }
         return (
             <Menu.Item
                 key={item.id}
@@ -50,19 +53,12 @@ class SubberMenu extends Component {
                 theme="dark"
                 mode={mode}
                 style={{ lineHeight: '64px' }}
+                defaultSelectedKeys={currentMenu}
             >
                 {getMenus(nav, pathname)}
             </Menu >
         );
     }
-
-
-    getMenus = (menuTreeN, idActivate) => {
-
-
-    }
-
-
 
     selectedKeys = (menuTreeN) => {
 
