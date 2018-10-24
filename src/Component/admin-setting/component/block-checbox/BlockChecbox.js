@@ -9,16 +9,17 @@ class BlockChecbox extends Component {
     }
 
     render() {
+        let { title } = this.props;
         return (
-            <div>
-
+            <div className='navigation-mode'>
+                <h3 className="antd-damnx-setting-drawer-index-content-page-style-setting">{title}</h3>
                 {this.renderBlockChecbox()}
             </div>
         );
     }
 
     renderBlockChecbox = () => {
-        let {blockChecbox,data} = this.props
+        let { blockChecbox, data } = this.props
         let result = [];
         for (let i in data) {
             result.push(

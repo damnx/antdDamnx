@@ -1,0 +1,11 @@
+.admin-setting-content-width{
+    float: left;
+    width: 100%;
+    padding: 10px 0px;
+}
+.admin-setting-content-width-iteam-content {
+    float: left;
+}
+.admin-setting-content-width-item-action{
+    float: right;
+}

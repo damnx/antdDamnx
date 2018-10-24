@@ -1,0 +1,16 @@
+.admin-setting-fixed-header {
+    float: left;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.admin-setting-fixed-header-iteam-content{
+    width: 50%;
+    text-align: left;
+    float: left;
+}
+.admin-setting-fixed-header-item-action {
+    width: 50%;
+    text-align: right;
+    float: right;
+}

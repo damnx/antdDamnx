@@ -12,7 +12,7 @@
 #ant-damnx-header .antd-damnx-components-top-nav-header-index-logo img{
     display: inline-block;
     vertical-align: middle;
-    height: 32px;
+    height: 30px;
 }
 
 #ant-damnx-header .antd-damnx-components-top-nav-header-index-logo h1{
@@ -31,4 +31,20 @@
 #ant-damnx-header .antd-damnx-components-top-nav-header-index-left .ant-menu
 {
     float: left;
+}
+.ant-damnx-header-mobile {
+    background: #ffff !important;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+.ant-damnx-header-mobile .antd-damnx-components-header-index-header{
+    box-shadow: none
+}
+
+.ant-damnx-fixed-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+    transition: width .2s;
 }

@@ -31,5 +31,11 @@ header css
     font-weight: 400;
 }
 
+.ant-damnx-content-fixed {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 0;
+}
+
 
 

@@ -5,36 +5,56 @@ import SubberMenu from '../menu';
 import IconSider from '../header/component/IconSider';
 import LogoNavMenu from './component/LogoNavMenu';
 
-const { Header } = Layout;
+const { Header, Content } = Layout;
 
 class HeaderTop extends Component {
     constructor(props) {
         super(props);
     }
     render() {
-        let { navigationMode, collapsed, isMobile } = this.props;
+        let { navigationMode, collapsed, isMobile, contentWidth, fixedHeader } = this.props;
         return (
-            <Header style={{ background: '' }} className="header" id="ant-damnx-header">
-                <div className={navigationMode === 'topMenu' ? "antd-damnx-components-top-nav-header-index-left" : 'antd-damnx-components-top-header-index-left'}>
-                    <IconSider
-                        navigationMode={navigationMode}
-                        collapsed={collapsed}
-                        onClick={() => this.toggle(!collapsed)}
-                        isMobile={isMobile}
-                    />
-                    <LogoNavMenu
-                        navigationMode={navigationMode}
-                        isMobile={isMobile}
-                    />
+            <Header
+                style={
+                    fixedHeader && !collapsed && navigationMode==='siderMenu' && !isMobile ?
+                        {
+                            padding: 0,
+                            width: 'calc(100% - 256px)'
+                        } : fixedHeader && collapsed && navigationMode==='siderMenu' && !isMobile ?
+                            {
+                                padding: 0,
+                                width: 'calc(100% - 80px)'
+                            } : {
+                                padding: 0,
+                            }
+                }
+                className={
+                    isMobile && fixedHeader ? "header ant-damnx-header-mobile ant-damnx-fixed-header" : fixedHeader ? "header ant-damnx-fixed-header" : isMobile ? "header ant-damnx-header-mobile" : "header"
+                }
+                id="ant-damnx-header"
+            >
+                <Content className={contentWidth === 'fluid' ? 'ant-damnx-content-fluid' : 'ant-damnx-content-fixed'}>
+                    <div className={navigationMode === 'topMenu' ? "antd-damnx-components-top-nav-header-index-left" : 'antd-damnx-components-top-header-index-left'}>
+                        <IconSider
+                            navigationMode={navigationMode}
+                            collapsed={collapsed}
+                            onClick={() => this.toggle(!collapsed)}
+                            isMobile={isMobile}
+                        />
+                        <LogoNavMenu
+                            navigationMode={navigationMode}
+                            isMobile={isMobile}
+                        />
 
-                    {this.renderSubberMenu(navigationMode, isMobile)}
-                    
-                </div>
+                        {this.renderSubberMenu(navigationMode, isMobile)}
+
+                    </div>
+                </Content>
             </Header >
         );
     }
 
-    renderSubberMenu = (navigationMode,isMobile) => {
+    renderSubberMenu = (navigationMode, isMobile) => {
         if (navigationMode === 'topMenu' && !isMobile) {
             return (
                 <SubberMenu
