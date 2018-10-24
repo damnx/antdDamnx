@@ -1,0 +1,30 @@
+.admin-setting-page-style-setting {
+    padding-top: 25px;
+}
+.page-style-setting-iteam-action{
+    text-align: right
+}
+
+.custom-page-style-setting-iteam-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 2px;
+    padding: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    background: #FAAD14;
+    margin-top: 4px;
+    float: left;
+}
+
+.custom-page-style-setting-iteam-title {
+    float: left;
+}
+.page-style-setting {
+    padding: 10px 0px
+}
+.custom-page-style-setting {
+    padding: 5px 0px;
+}

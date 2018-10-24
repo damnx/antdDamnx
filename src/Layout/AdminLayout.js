@@ -110,17 +110,7 @@ const AdminLayout = (Component) => {
                             <Content
                                 className={contentWidth === 'fluid' ? 'ant-damnx-content-fluid' : 'ant-damnx-content-fixed'}
                                 style={
-                                    fixedSidebar && fixedHeader && !collapsed && !isMobile ?
-                                        { background: '#fff', minHeight: 5000, marginTop: 64, marginLeft: 256 } :
-
-                                        fixedSidebar && !fixedHeader && !collapsed && !isMobile ?
-                                            { background: '#fff', minHeight: 5000, marginLeft: 256 } :
-
-                                            fixedSidebar && fixedHeader && collapsed && !isMobile ?
-                                            { background: '#fff', minHeight: 5000, marginLeft: 80,marginTop: 64 } :
-                                            {
-                                                background: '#fff', minHeight: 5000
-                                            }
+                                    fixedHeader?{ background: '#fff', minHeight: 5000, marginTop: 64,width:'100%' }:{ background: '#fff', minHeight: 5000,width:'100%'}
                                 }
                             >
                                 <Component

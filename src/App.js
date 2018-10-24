@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import AdminLayout from './Layout/AdminLayout'
+import AdminLayout from './Layout/AdminLayout';
+import { Row, Col } from 'antd';
+import { SketchPicker, PhotoshopPicker } from 'react-color';
 
 class App extends Component {
   constructor(props) {
@@ -8,9 +10,13 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        Text messaging
-      </div>
+      <Row>
+        <Col span={12}>
+          <SketchPicker />
+          <PhotoshopPicker />
+        </Col>
+        <Col span={12}>col-12</Col>
+      </Row>
     );
   }
 }

@@ -1,9 +1,12 @@
 .ant-damnx-drawer-sider-admin-mobile{
     
 }
-.antd-damnx-components-sider-menu-index-fixSiderbar{
+.antd-damnx-components-sider-menu-index-fixSiderbar .ant-layout-sider-children{
     position: fixed;
     top: 0;
     left: 0;
-    widows: 256px
+    flex: 0 0 256px;
+    max-width: 256px;
+    min-width: 256px;
+    width: 256px;
 }

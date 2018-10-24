@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Drawer, Icon } from 'antd';
+import { Drawer, Icon, Divider } from 'antd';
 import './AdminSetting.css';
 import BlockChecbox from '../admin-setting/component/block-checbox';
 import * as CONST from '../../config/constant';
 import ContentWidth from '../admin-setting/component/content-width';
 import Fixed from './component/fixed';
+import PageStyleSetting from '../admin-setting/component/page-style-setting'
 
 
 class AdminSetting extends Component {
@@ -38,6 +39,10 @@ class AdminSetting extends Component {
                     onHandleClick={this.togglerContent}
                 >
                     <div className='antd-damnx-components-setting-drawer-index-content'>
+                        <PageStyleSetting
+
+                        />
+                        <Divider></Divider>
                         <BlockChecbox
                             blockChecbox={blockChecbox}
                             onClickBlockChecbox={this.onClickBlockChecbox}
@@ -57,17 +62,18 @@ class AdminSetting extends Component {
                             title='Fixed Header'
                             name='fixedHeader'
                         />
-                        
+
                         <Fixed
                             fixedHeader={fixedSidebar}
                             onChange={this.onChange}
-                            disabled={blockChecbox === 'siderMenu'?false:true}
+                            disabled={blockChecbox === 'siderMenu' ? false : true}
                             title='Fixed Sidebar'
                             name='fixedSidebar'
                         />
+                        <Divider></Divider>
                     </div>
                 </Drawer>
-            </div>
+            </div >
         );
     }
 
