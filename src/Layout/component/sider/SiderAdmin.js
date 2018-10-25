@@ -11,21 +11,21 @@ class SiderAdmin extends Component {
     }
 
     render() {
-        let { navigationMode, collapsed, isMobile, fixedSidebar } = this.props;
+        let { navigationMode, collapsed, isMobile, fixedSidebar, style } = this.props;
         if (!isMobile && navigationMode === 'siderMenu') {
             return (
-                this.renderSider(collapsed, fixedSidebar)
+                this.renderSider(collapsed, fixedSidebar, style, navigationMode)
             );
         }
         if (isMobile) {
             return (
-                this.renderDrawer(collapsed, fixedSidebar)
+                this.renderDrawer(collapsed, fixedSidebar, style, navigationMode)
             );
         }
         return null;
     }
 
-    renderDrawer = (collapsed, fixedSidebar) => {
+    renderDrawer = (collapsed, fixedSidebar, style, navigationMode) => {
         return (<Drawer
             placement="left"
             onClose={() => this.onClose(collapsed)}
@@ -38,11 +38,11 @@ class SiderAdmin extends Component {
             className='ant-damnx-drawer-sider-admin-mobile'
         >
 
-            {this.renderSider(false, fixedSidebar)}
+            {this.renderSider(false, fixedSidebar, style, navigationMode)}
         </Drawer>)
     }
 
-    renderSider = (collapsed, fixedSidebar) => {
+    renderSider = (collapsed, fixedSidebar, style, navigationMode) => {
         return (
             <Sider
                 trigger={null}
@@ -69,7 +69,9 @@ class SiderAdmin extends Component {
                     </a>
                 </div>
                 <SubberMenu
+                    style={style}
                     mode='inline'
+                    navigationMode={navigationMode}
                     {...this.props}
                 />
             </Sider>

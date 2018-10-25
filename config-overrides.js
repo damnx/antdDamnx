@@ -9,7 +9,14 @@ const options = {
   stylesDir: path.join(__dirname, './src/styles'),
   varFile: path.join(__dirname, './src/styles/variables.less'),
   mainLessFile: path.join(__dirname, './src/styles/index.less'),
-  themeVariables: ['@primary-color'],
+  themeVariables: [
+    '@primary-color',
+    '@secondary-color',
+    '@text-color',
+    '@text-color-secondary',
+    '@heading-color',
+    '@layout-header-background',
+  ],
   indexFileName: 'index.html',
   generateOnce: false
 }
@@ -20,7 +27,9 @@ module.exports = function override(config, env) {
     config,
   );
   config = rewireLess.withLoaderOptions({
-    modifyVars: { "@primary-color": "#1DA57A" },
+    modifyVars: {
+      "@primary-color": "#1DA57A",
+    },
     javascriptEnabled: true,
   })(config, env);
   config.plugins.push(new AntDesignThemePlugin(options));

@@ -14,14 +14,6 @@ class CustomPageStyleSetting extends Component {
                     <span className='custom-page-style-setting-iteam-color'></span>
                     <span className='custom-page-style-setting-iteam-title'>123213</span>
                 </Row>
-                <Row className='custom-page-style-setting'>
-                    <span className='custom-page-style-setting-iteam-color'></span>
-                    <span className='custom-page-style-setting-iteam-title'>123213</span>
-                </Row>
-                <Row className='custom-page-style-setting'>
-                    <span className='custom-page-style-setting-iteam-color'></span>
-                    <span className='custom-page-style-setting-iteam-title'>123213</span>
-                </Row>
             </div>
         );
     }

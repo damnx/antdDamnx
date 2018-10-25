@@ -40,7 +40,7 @@ class AdminSetting extends Component {
                 >
                     <div className='antd-damnx-components-setting-drawer-index-content'>
                         <PageStyleSetting
-
+                            onChangeStyle={this.onChangeStyle}
                         />
                         <Divider></Divider>
                         <BlockChecbox
@@ -75,6 +75,10 @@ class AdminSetting extends Component {
                 </Drawer>
             </div >
         );
+    }
+
+    onChangeStyle = (value) => {
+        this.props.onChangeStyle(value)
     }
 
     onChange = (name, value) => {

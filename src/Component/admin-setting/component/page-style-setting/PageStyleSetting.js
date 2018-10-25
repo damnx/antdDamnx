@@ -18,7 +18,7 @@ class PageStyleSetting extends Component {
                         Style
                     </Col>
                     <Col className="page-style-setting-iteam-action" span={12}>
-                        <Radio.Group size='small' value='dark'>
+                        <Radio.Group size='small' defaultValue='dark' onChange={(e) => this.onChange(e.target.value)}>
                             <Radio.Button value="dark">Dark</Radio.Button>
                             <Radio.Button value="light">Light</Radio.Button>
                         </Radio.Group>
@@ -27,7 +27,7 @@ class PageStyleSetting extends Component {
                 <div>
                     <label
                         style={{
-                            padding:'5px 0px'
+                            padding: '5px 0px'
                         }}
                     >
                         Customize
@@ -38,6 +38,10 @@ class PageStyleSetting extends Component {
 
             </div>
         );
+    }
+
+    onChange = (value) => {
+        this.props.onChangeStyle(value)
     }
 }
 

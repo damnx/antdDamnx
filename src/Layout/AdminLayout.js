@@ -16,12 +16,18 @@ const AdminLayout = (Component) => {
             super(props);
             let initialValue = {
                 '@primary-color': '#FAAD14',
+                '@secondary-color': '#0000ff',
+                '@text-color': '#000000',
+                '@text-color-secondary': '#eb2f96',
+                '@heading-color': '#fa8c16',
+                '@layout-header-background': '#001529',
             };
             let vars = {};
             let contentWidth = LocalStorage.get('contentWidth') ? LocalStorage.get('contentWidth') : 'fixed';
             let navigationMode = LocalStorage.get('navigationMode') ? LocalStorage.get('navigationMode') : 'siderMenu';
             let fixedHeader = LocalStorage.get('fixedHeader') ? LocalStorage.get('fixedHeader') : false;
             let fixedSidebar = LocalStorage.get('fixedSidebar') ? LocalStorage.get('fixedSidebar') : false;
+            let style = LocalStorage.get('style') ? LocalStorage.get('style') : 'dark';
             try {
                 vars = Object.assign({}, initialValue, JSON.parse(localStorage.getItem('app-theme')));
             } finally {
@@ -34,7 +40,8 @@ const AdminLayout = (Component) => {
                     isMobile: false,
                     contentWidth: contentWidth,
                     fixedHeader: fixedHeader,
-                    fixedSidebar: fixedSidebar
+                    fixedSidebar: fixedSidebar,
+                    style: style
                 };
                 window.less
                     .modifyVars(vars)
@@ -47,7 +54,7 @@ const AdminLayout = (Component) => {
         }
 
         componentDidMount() {
-            let { isMobile, contentWidth, navigationMode, fixedHeader, fixedSidebar } = this.state;
+            let { isMobile, contentWidth, navigationMode, fixedHeader, fixedSidebar, style } = this.state;
             if (isMobile || navigationMode === 'siderMenu') {
                 contentWidth = 'fluid'
             }
@@ -59,6 +66,7 @@ const AdminLayout = (Component) => {
             LocalStorage.set('contentWidth', contentWidth);
             LocalStorage.set('fixedHeader', fixedHeader);
             LocalStorage.set('fixedSidebar', fixedSidebar);
+            LocalStorage.set('style', style);
 
             this.enquireHandler = enquireScreen(mobile => {
                 const { isMobile, navigationMode, contentWidth } = this.state;
@@ -83,7 +91,7 @@ const AdminLayout = (Component) => {
         }
 
         render() {
-            let { collapsed, visible, navigationMode, isMobile, contentWidth, fixedHeader, fixedSidebar } = this.state;
+            let { collapsed, visible, navigationMode, isMobile, contentWidth, fixedHeader, fixedSidebar, style } = this.state;
             return (
                 <Layout>
                     {/* sider */}
@@ -93,6 +101,7 @@ const AdminLayout = (Component) => {
                         onClickToggle={this.onClickToggle}
                         isMobile={isMobile}
                         fixedSidebar={fixedSidebar}
+                        style={style}
                         {...this.props}
                     />
                     <Layout>
@@ -104,13 +113,14 @@ const AdminLayout = (Component) => {
                             isMobile={isMobile}
                             contentWidth={contentWidth}
                             fixedHeader={fixedHeader}
+                            style={style}
                             {...this.props}
                         />
                         <Layout style={{ margin: '10px 10px 0px', padding: '0px' }}>
                             <Content
                                 className={contentWidth === 'fluid' ? 'ant-damnx-content-fluid' : 'ant-damnx-content-fixed'}
                                 style={
-                                    fixedHeader?{ background: '#fff', minHeight: 5000, marginTop: 64,width:'100%' }:{ background: '#fff', minHeight: 5000,width:'100%'}
+                                    fixedHeader ? { background: '#fff', minHeight: 5000, marginTop: 64, width: '100%' } : { background: '#fff', minHeight: 5000, width: '100%' }
                                 }
                             >
                                 <Component
@@ -135,9 +145,17 @@ const AdminLayout = (Component) => {
                         contentWidth={contentWidth}
                         fixedHeader={fixedHeader}
                         fixedSidebar={fixedSidebar}
+                        onChangeStyle={this.onChangeStyle}
                     />
                 </Layout>
             )
+        }
+
+        onChangeStyle = (value) => {
+            this.setState({
+                ...this.state,
+                style: value
+            })
         }
 
         onChange = (name, value) => {

@@ -12,15 +12,15 @@ class HeaderTop extends Component {
         super(props);
     }
     render() {
-        let { navigationMode, collapsed, isMobile, contentWidth, fixedHeader } = this.props;
+        let { navigationMode, collapsed, isMobile, contentWidth, fixedHeader, style } = this.props;
         return (
             <Header
                 style={
-                    fixedHeader && !collapsed && navigationMode==='siderMenu' && !isMobile ?
+                    fixedHeader && !collapsed && navigationMode === 'siderMenu' && !isMobile ?
                         {
                             padding: 0,
                             width: 'calc(100% - 256px)'
-                        } : fixedHeader && collapsed && navigationMode==='siderMenu' && !isMobile ?
+                        } : fixedHeader && collapsed && navigationMode === 'siderMenu' && !isMobile ?
                             {
                                 padding: 0,
                                 width: 'calc(100% - 80px)'
@@ -46,7 +46,7 @@ class HeaderTop extends Component {
                             isMobile={isMobile}
                         />
 
-                        {this.renderSubberMenu(navigationMode, isMobile)}
+                        {this.renderSubberMenu(navigationMode, isMobile, style)}
 
                     </div>
                 </Content>
@@ -54,12 +54,13 @@ class HeaderTop extends Component {
         );
     }
 
-    renderSubberMenu = (navigationMode, isMobile) => {
+    renderSubberMenu = (navigationMode, isMobile, style) => {
         if (navigationMode === 'topMenu' && !isMobile) {
             return (
                 <SubberMenu
                     mode='horizontal'
                     navigationMode={navigationMode}
+                    style={style}
                     {...this.props}
                 />
             );

@@ -4,8 +4,8 @@ import nav from './_nav';
 import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
-let currentMenu=[];
-const getMenus = (nav, pathname) => {
+let currentMenu = [];
+const getMenus = (nav, pathname,navigationMode) => {
     return nav.map((item) => {
         if (item.children) {
             return (
@@ -19,11 +19,12 @@ const getMenus = (nav, pathname) => {
                             <span>{item.name}</span>
                         </span>
                     }
+                    className={'damnx-' + navigationMode + '-sub-menu'}
                 >
                     {getMenus(item.children, pathname)}
                 </SubMenu>
             )
-        } 
+        }
         if (item.route === pathname) {
             currentMenu[0] = item.id
         }
@@ -46,16 +47,18 @@ class SubberMenu extends Component {
     }
 
     render() {
-        let { mode } = this.props;
+        let { mode, style, navigationMode } = this.props;
         let pathname = this.props.location.pathname;
+        console.log(style);
         return (
             <Menu
-                theme="dark"
+                // theme='dark'
                 mode={mode}
-                style={{ lineHeight: '64px' }}
+                style={{ lineHeight: '63px' }}
                 defaultSelectedKeys={currentMenu}
+                className={'damnx-' + navigationMode + '-menu'}
             >
-                {getMenus(nav, pathname)}
+                {getMenus(nav, pathname, navigationMode)}
             </Menu >
         );
     }
