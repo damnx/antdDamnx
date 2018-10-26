@@ -12,7 +12,7 @@ class HeaderTop extends Component {
         super(props);
     }
     render() {
-        let { navigationMode, collapsed, isMobile, contentWidth, fixedHeader, style } = this.props;
+        let { navigationMode, collapsed, isMobile, contentWidth, fixedHeader } = this.props;
         return (
             <Header
                 style={
@@ -46,7 +46,7 @@ class HeaderTop extends Component {
                             isMobile={isMobile}
                         />
 
-                        {this.renderSubberMenu(navigationMode, isMobile, style)}
+                        {this.renderSubberMenu(navigationMode, isMobile)}
 
                     </div>
                 </Content>
@@ -54,13 +54,12 @@ class HeaderTop extends Component {
         );
     }
 
-    renderSubberMenu = (navigationMode, isMobile, style) => {
+    renderSubberMenu = (navigationMode, isMobile) => {
         if (navigationMode === 'topMenu' && !isMobile) {
             return (
                 <SubberMenu
                     mode='horizontal'
                     navigationMode={navigationMode}
-                    style={style}
                     {...this.props}
                 />
             );

@@ -15,7 +15,7 @@ const options = {
     '@text-color',
     '@text-color-secondary',
     '@heading-color',
-    '@layout-header-background',
+    '@layout-header-background'
   ],
   indexFileName: 'index.html',
   generateOnce: false

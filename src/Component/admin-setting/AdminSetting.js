@@ -14,10 +14,11 @@ class AdminSetting extends Component {
     }
 
     render() {
-        let { visible, blockChecbox, isMobile, contentWidth, fixedHeader, fixedSidebar } = this.props;
+        let { visible, blockChecbox, isMobile, contentWidth, fixedHeader, fixedSidebar, style, vars } = this.props;
         return (
             <div>
                 <Drawer
+                classNam='ant-damnx-drawer'
                     placement="right"
                     onClose={this.togglerContent}
                     visible={visible}
@@ -41,6 +42,9 @@ class AdminSetting extends Component {
                     <div className='antd-damnx-components-setting-drawer-index-content'>
                         <PageStyleSetting
                             onChangeStyle={this.onChangeStyle}
+                            style={style}
+                            vars={vars}
+                            onClick={this.onClick}
                         />
                         <Divider></Divider>
                         <BlockChecbox
@@ -77,8 +81,12 @@ class AdminSetting extends Component {
         );
     }
 
-    onChangeStyle = (value) => {
-        this.props.onChangeStyle(value)
+    onClick = (name, value) => {
+        this.props.onClick(name, value)
+    }
+
+    onChangeStyle = (value, initialValue) => {
+        this.props.onChangeStyle(value, initialValue)
     }
 
     onChange = (name, value) => {

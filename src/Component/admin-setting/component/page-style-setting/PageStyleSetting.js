@@ -10,6 +10,8 @@ class PageStyleSetting extends Component {
     }
 
     render() {
+        let { style, vars } = this.props;
+        
         return (
             <div className='admin-setting-page-style-setting'>
                 <Row className='page-style-setting'>
@@ -18,7 +20,7 @@ class PageStyleSetting extends Component {
                         Style
                     </Col>
                     <Col className="page-style-setting-iteam-action" span={12}>
-                        <Radio.Group size='small' defaultValue='dark' onChange={(e) => this.onChange(e.target.value)}>
+                        <Radio.Group size='small' defaultValue={style} onChange={(e) => this.onChange(e.target.value)}>
                             <Radio.Button value="dark">Dark</Radio.Button>
                             <Radio.Button value="light">Light</Radio.Button>
                         </Radio.Group>
@@ -33,6 +35,30 @@ class PageStyleSetting extends Component {
                         Customize
                     </label>
                     <CustomPageStyleSetting
+                        onClick={this.onClick}
+                        vars={vars}
+                        title='Primary Color'
+                        name='@primary-color'
+
+                    />
+                    <CustomPageStyleSetting
+                        onClick={this.onClick}
+                        vars={vars}
+                        title='Text Color'
+                        name='@text-color'
+                    />
+                    <CustomPageStyleSetting
+                        onClick={this.onClick}
+                        vars={vars}
+                        title='Heading Color'
+                        name='@heading-color'
+                    />
+
+                    <CustomPageStyleSetting
+                        onClick={this.onClick}
+                        vars={vars}
+                        title='Layout Header Background'
+                        name='@layout-header-background'
                     />
                 </div>
 
@@ -40,8 +66,29 @@ class PageStyleSetting extends Component {
         );
     }
 
+    onClick = (name, value) => {
+        this.props.onClick(name, value)
+    }
+
     onChange = (value) => {
-        this.props.onChangeStyle(value)
+        let initialValue = {
+            '@primary-color': '#1890ff',
+            '@secondary-color': '#0000ff',
+            '@text-color': 'rgba(0, 0, 0, 0.65)',
+            '@text-color-secondary': '#eb2f96',
+            '@heading-color': '#fff',
+        };
+
+        if (value === 'light') {
+            initialValue = {
+                '@primary-color': '#1890ff',
+                '@secondary-color': '#0000ff',
+                '@text-color': 'rgba(0, 0, 0, 0.65)',
+                '@text-color-secondary': '#eb2f96',
+                '@heading-color': 'rgba(0, 0, 0, 0.65)',
+            };
+        }
+        this.props.onChangeStyle(value, initialValue)
     }
 }
 

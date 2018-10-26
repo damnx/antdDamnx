@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
 let currentMenu = [];
-const getMenus = (nav, pathname,navigationMode) => {
+const getMenus = (nav, pathname, navigationMode) => {
     return nav.map((item) => {
         if (item.children) {
             return (
@@ -21,7 +21,7 @@ const getMenus = (nav, pathname,navigationMode) => {
                     }
                     className={'damnx-' + navigationMode + '-sub-menu'}
                 >
-                    {getMenus(item.children, pathname)}
+                    {getMenus(item.children, pathname, navigationMode)}
                 </SubMenu>
             )
         }
@@ -47,9 +47,8 @@ class SubberMenu extends Component {
     }
 
     render() {
-        let { mode, style, navigationMode } = this.props;
+        let { mode, navigationMode } = this.props;
         let pathname = this.props.location.pathname;
-        console.log(style);
         return (
             <Menu
                 // theme='dark'

@@ -34,8 +34,8 @@ export default [
                 children: [
                     {
                         id: "2.3.1",
-                        name: "highCharts",
-                        route: "/bc",
+                        name: "damnx",
+                        route: "/damnx",
                         parentId:'2.3'
                     },
                     {
@@ -77,8 +77,8 @@ export default [
                 children: [
                     {
                         id: "3.3.1",
-                        name: "highCharts",
-                        route: "/bc",
+                        name: "damnx",
+                        route: "/damnx",
                         parentId:'3.3'
                     },
                     {

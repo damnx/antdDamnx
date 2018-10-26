@@ -10,6 +10,10 @@
   color: @primary-color
 }
 
+#ant-damnx-header .antd-damnx-components-top-nav-header-index-logo h1 {
+  color: @heading-color;
+}
+
 .damnx-topMenu-menu {
   background: @layout-header-background;
   color: @heading-color;
@@ -20,14 +24,35 @@
 }
 
 .damnx-topMenu-sub-menu .ant-menu {
-  background: fade(@layout-header-background, 85%) ;
+  background-color:@layout-header-background;
   color: @heading-color;
 }
 
-.damnx-topMenu-sub-menu .ant-menu-item > a:hover {
-  color: @primary-color;
-}
+// .damnx-topMenu-sub-menu .ant-menu-item > a:hover {
+//   color: @primary-color;
+// }
 
 .damnx-topMenu-sub-menu .ant-menu-item > a{
   color: @heading-color;
+}
+
+.damnx-topMenu-sub-menu .ant-menu-item-active  {
+  background: @primary-color;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: @primary-color;
+}
+
+// .damnx-topMenu-sub-menu .ant-menu-item-active ,.ant-menu-item:hover{
+//   color: @primary-color;
+// }
+
+// .damnx-topMenu-sub-menu .ant-menu-item > a:active {
+//   background-color: @primary-color;
+//   width: 100%;
+// }
+
+.ant-drawer-mask {
+  background-color: rgba(0, 0, 0, 0.65);
 }
