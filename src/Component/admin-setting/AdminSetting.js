@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Drawer, Icon, Divider } from 'antd';
+import { Drawer, Icon, Divider, Spin } from 'antd';
 import './AdminSetting.css';
 import BlockChecbox from '../admin-setting/component/block-checbox';
 import * as CONST from '../../config/constant';
@@ -17,8 +17,9 @@ class AdminSetting extends Component {
         let { visible, blockChecbox, isMobile, contentWidth, fixedHeader, fixedSidebar, style, vars } = this.props;
         return (
             <div>
+
                 <Drawer
-                classNam='ant-damnx-drawer'
+                    classNam='ant-damnx-drawer'
                     placement="right"
                     onClose={this.togglerContent}
                     visible={visible}
@@ -39,6 +40,7 @@ class AdminSetting extends Component {
                     }}
                     onHandleClick={this.togglerContent}
                 >
+
                     <div className='antd-damnx-components-setting-drawer-index-content'>
                         <PageStyleSetting
                             onChangeStyle={this.onChangeStyle}
@@ -76,9 +78,9 @@ class AdminSetting extends Component {
                             title='Fixed Sidebar'
                             name='fixedSidebar'
                         />
-                        <Divider></Divider>
                     </div>
                 </Drawer>
+
             </div >
         );
     }

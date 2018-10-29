@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
 let currentMenu = [];
-const getMenus = (nav, pathname, navigationMode) => {
+const getMenus = (nav, pathname, navigationMode, isMobile) => {
     return nav.map((item) => {
         if (item.children) {
             return (
@@ -19,7 +19,7 @@ const getMenus = (nav, pathname, navigationMode) => {
                             <span>{item.name}</span>
                         </span>
                     }
-                    className={'damnx-' + navigationMode + '-sub-menu'}
+                    className={isMobile ? ('damnx-sub-menu-mobile') : 'damnx-' + navigationMode + '-sub-menu'}
                 >
                     {getMenus(item.children, pathname, navigationMode)}
                 </SubMenu>
@@ -47,7 +47,8 @@ class SubberMenu extends Component {
     }
 
     render() {
-        let { mode, navigationMode } = this.props;
+        let { mode, navigationMode, isMobile } = this.props;
+        console.log(isMobile);
         let pathname = this.props.location.pathname;
         return (
             <Menu
@@ -55,19 +56,15 @@ class SubberMenu extends Component {
                 mode={mode}
                 style={{
                     lineHeight: '63px',
-                    background:'transparent',
-                    border:'transparent'
+                    background: 'transparent',
+                    border: 'transparent'
                 }}
                 defaultSelectedKeys={currentMenu}
-                className={'damnx-' + navigationMode + '-menu'}
+                className={isMobile ? ('damnx-menu-mobile') : ('damnx-' + navigationMode + '-menu')}
             >
-                {getMenus(nav, pathname, navigationMode)}
+                {getMenus(nav, pathname, navigationMode, isMobile)}
             </Menu >
         );
-    }
-
-    selectedKeys = (menuTreeN) => {
-
     }
 
 }

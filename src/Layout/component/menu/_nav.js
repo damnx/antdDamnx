@@ -35,7 +35,7 @@ export default [
                     {
                         id: "2.3.1",
                         name: "damnx",
-                        route: "/damnx",
+                        route: "/damnxss",
                         parentId:'2.3'
                     },
                     {
@@ -59,7 +59,7 @@ export default [
                
                 id: "3.1",
                 name: "Dashboard",
-                route: "/damnx",
+                route: "/damnxsssss",
                 parentId:'3'
             },
             {
@@ -78,7 +78,7 @@ export default [
                     {
                         id: "3.3.1",
                         name: "damnx",
-                        route: "/damnx",
+                        route: "/damnxss",
                         parentId:'3.3'
                     },
                     {
