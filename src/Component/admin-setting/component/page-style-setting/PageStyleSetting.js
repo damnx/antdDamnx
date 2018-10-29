@@ -11,7 +11,7 @@ class PageStyleSetting extends Component {
 
     render() {
         let { style, vars } = this.props;
-        
+
         return (
             <div className='admin-setting-page-style-setting'>
                 <Row className='page-style-setting'>
@@ -39,7 +39,6 @@ class PageStyleSetting extends Component {
                         vars={vars}
                         title='Primary Color'
                         name='@primary-color'
-
                     />
                     <CustomPageStyleSetting
                         onClick={this.onClick}
@@ -60,6 +59,21 @@ class PageStyleSetting extends Component {
                         title='Layout Header Background'
                         name='@layout-header-background'
                     />
+
+                    <CustomPageStyleSetting
+                        onClick={this.onClick}
+                        vars={vars}
+                        title='Layout Sider Background'
+                        name='@layout-sider-background'
+                    />
+
+                    <CustomPageStyleSetting
+                        onClick={this.onClick}
+                        vars={vars}
+                        title='Sider Color'
+                        name='@secondary-color'
+                    />
+
                 </div>
 
             </div>
@@ -71,24 +85,57 @@ class PageStyleSetting extends Component {
     }
 
     onChange = (value) => {
-        let initialValue = {
-            '@primary-color': '#1890ff',
-            '@secondary-color': '#0000ff',
-            '@text-color': 'rgba(0, 0, 0, 0.65)',
-            '@text-color-secondary': '#eb2f96',
-            '@heading-color': '#fff',
-        };
 
-        if (value === 'light') {
-            initialValue = {
+        let { blockChecbox, vars, isMobile } = this.props;
+
+        if (isMobile) {
+            vars = {
                 '@primary-color': '#1890ff',
-                '@secondary-color': '#0000ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',
                 '@text-color-secondary': '#eb2f96',
                 '@heading-color': 'rgba(0, 0, 0, 0.65)',
+                '@layout-header-background': '#fff',
+                '@layout-sider-background': '#001529',
+                '@secondary-color': '#fff',
+            }
+        }
+
+        if (blockChecbox === 'siderMenu' && value === 'dark' && !isMobile ) {
+            vars = {
+                '@primary-color': '#1890ff',
+                '@text-color': 'rgba(0, 0, 0, 0.65)',
+                '@text-color-secondary': '#eb2f96',
+                '@heading-color': 'rgba(0, 0, 0, 0.65)',
+                '@layout-header-background': '#fff',
+                '@layout-sider-background': '#001529',
+                '@secondary-color': '#fff',
+            }
+        }
+
+        if (blockChecbox === 'topMenu' && value === 'dark' && !isMobile) {
+            vars = {
+                '@primary-color': '#1890ff',
+                '@text-color': 'rgba(0, 0, 0, 0.65)',
+                '@text-color-secondary': '#eb2f96',
+                '@heading-color': '#fff',
+                '@layout-header-background': '#001529',
+                '@layout-sider-background': '#001529',
+                '@secondary-color': '#fff',
+            }
+        }
+
+        if (value === 'light' && !isMobile) {
+            vars = {
+                '@primary-color': '#1890ff',
+                '@text-color': 'rgba(0, 0, 0, 0.65)',
+                '@text-color-secondary': '#eb2f96',
+                '@heading-color': 'rgba(0, 0, 0, 0.65)',
+                '@layout-header-background': '#fff',
+                '@layout-sider-background': '#fff',
+                '@secondary-color': 'rgba(0, 0, 0, 0.65)',
             };
         }
-        this.props.onChangeStyle(value, initialValue)
+        this.props.onChangeStyle(value, vars)
     }
 }
 

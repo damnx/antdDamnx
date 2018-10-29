@@ -1,6 +1,4 @@
-.ant-damnx-drawer-sider-admin-mobile{
-    
-}
+
 .antd-damnx-components-sider-menu-index-fixSiderbar .ant-layout-sider-children{
     position: fixed;
     top: 0;
@@ -9,4 +7,9 @@
     max-width: 256px;
     min-width: 256px;
     width: 256px;
+}
+
+.damnx-siderMenu-menu{
+    background: transparent;
+    background: transparent
 }

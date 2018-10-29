@@ -16,11 +16,12 @@ const AdminLayout = (Component) => {
             super(props);
             let initialValue = {
                 '@primary-color': '#1890ff',
-                '@secondary-color': '#0000ff',
-                '@text-color': '#000000',
+                '@text-color': 'rgba(0, 0, 0, 0.65)',
                 '@text-color-secondary': '#eb2f96',
-                '@heading-color': '#fff',
-                '@layout-header-background': '#001529',
+                '@heading-color': 'rgba(0, 0, 0, 0.65)',
+                '@layout-header-background': '#fff',
+                '@layout-sider-background': '#001529',
+                '@secondary-color': '#fff',
             };
             let vars = {};
             let contentWidth = LocalStorage.get('contentWidth') ? LocalStorage.get('contentWidth') : 'fixed';
@@ -116,7 +117,7 @@ const AdminLayout = (Component) => {
                                 fixedHeader={fixedHeader}
                                 {...this.props}
                             />
-                            <Layout style={{ margin: '10px 10px 0px', padding: '0px' }}>
+                            <Layout style={{ margin: '24px 24px 0px', padding: '0px' }}>
                                 <Content
                                     className={contentWidth === 'fluid' ? 'ant-damnx-content-fluid' : 'ant-damnx-content-fixed'}
                                     style={
@@ -174,15 +175,9 @@ const AdminLayout = (Component) => {
         }
 
         modifyVarsChange = (initialValue) => {
-            this.setState({
-                isLoading: true
-            })
             window.less
                 .modifyVars(initialValue)
                 .then(() => {
-                    this.setState({
-                        isLoading: false
-                    })
                     message.success(`Theme updated successfully`);
                     localStorage.setItem("app-theme", JSON.stringify(initialValue));
                 })

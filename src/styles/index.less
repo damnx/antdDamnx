@@ -15,17 +15,29 @@
 }
 
 .damnx-topMenu-menu {
-  background: @layout-header-background;
   color: @heading-color;
+}
+
+.damnx-siderMenu-menu {
+  color: @secondary-color;
 }
 
 .damnx-topMenu-menu > .ant-menu-item > a {
   color: @heading-color;
 }
 
+.damnx-siderMenu-menu > .ant-menu-item > a{
+  color: @secondary-color;
+}
+
 .damnx-topMenu-sub-menu .ant-menu {
   background-color:@layout-header-background;
   color: @heading-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu {
+  background-color: @layout-sider-background;
+  color: @secondary-color;
 }
 
 // .damnx-topMenu-sub-menu .ant-menu-item > a:hover {
@@ -36,8 +48,21 @@
   color: @heading-color;
 }
 
+.damnx-siderMenu-sub-menu .ant-menu-item > a{
+  color: @secondary-color;
+}
+
 .damnx-topMenu-sub-menu .ant-menu-item-active  {
   background: @primary-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-item-active  {
+  background: @layout-sider-background;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-inline{
+  // background: fade(@layout-sider-background, 5%);
+  
 }
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
@@ -55,4 +80,28 @@
 
 .ant-drawer-mask {
   background-color: rgba(0, 0, 0, 0.65);
+}
+
+.antd-damnx-components-sider-menu-index-logo h1 {
+  color: @secondary-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
+  background: @secondary-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
+  background: @secondary-color;
+}
+
+.damnx-topMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
+  background: @heading-color;
+}
+
+.damnx-topMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
+  background: @heading-color;
+}
+
+.antd-damnx-components-header-index-trigger {
+  color: @heading-color;
 }

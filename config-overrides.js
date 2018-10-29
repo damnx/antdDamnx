@@ -15,7 +15,9 @@ const options = {
     '@text-color',
     '@text-color-secondary',
     '@heading-color',
-    '@layout-header-background'
+    '@layout-header-background',
+    '@btn-primary-bg',
+    '@layout-sider-background',
   ],
   indexFileName: 'index.html',
   generateOnce: false
@@ -29,9 +31,12 @@ module.exports = function override(config, env) {
   config = rewireLess.withLoaderOptions({
     modifyVars: {
       "@primary-color": "#1DA57A",
+      "@layout-sider-background": "#f5222d",
+      "@secondary-color":"#fff",
     },
     javascriptEnabled: true,
   })(config, env);
   config.plugins.push(new AntDesignThemePlugin(options));
   return config;
 };
+

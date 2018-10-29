@@ -15,7 +15,6 @@ class CustomPageStyleSetting extends Component {
         let { title, vars, name } = this.props;
         let { displayColorPicker } = this.state;
         let color = vars[name]
-        console.log(color);
 
         const styles = reactCSS({
             'default': {
@@ -57,7 +56,7 @@ class CustomPageStyleSetting extends Component {
                 </div>
                 {displayColorPicker ? <div style={styles.popover}>
                     <div style={styles.cover} onClick={this.handleClose} />
-                    <SketchPicker color={color} onChange={this.handleChange} />
+                    <SketchPicker color={color} onChangeComplete={this.handleChange} />
                 </div> : null}
             </div>
         );
@@ -67,9 +66,10 @@ class CustomPageStyleSetting extends Component {
         this.setState({ displayColorPicker: !displayColorPicker })
     }
 
-    handleClose = (color) => {
-        console.log(color);
-        this.setState({ displayColorPicker: false })
+    handleClose = () => {
+        this.setState({
+            displayColorPicker: false
+        })
     }
 
     handleChange = (color) => {

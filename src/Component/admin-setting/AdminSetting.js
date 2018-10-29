@@ -45,6 +45,8 @@ class AdminSetting extends Component {
                             style={style}
                             vars={vars}
                             onClick={this.onClick}
+                            blockChecbox={blockChecbox}
+                            isMobile={isMobile}
                         />
                         <Divider></Divider>
                         <BlockChecbox

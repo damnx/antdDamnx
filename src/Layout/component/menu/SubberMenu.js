@@ -53,7 +53,11 @@ class SubberMenu extends Component {
             <Menu
                 // theme='dark'
                 mode={mode}
-                style={{ lineHeight: '63px' }}
+                style={{
+                    lineHeight: '63px',
+                    background:'transparent',
+                    border:'transparent'
+                }}
                 defaultSelectedKeys={currentMenu}
                 className={'damnx-' + navigationMode + '-menu'}
             >

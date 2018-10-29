@@ -13,7 +13,6 @@ class App extends Component {
       <Row>
         <Col span={12}>
           <SketchPicker />
-          <PhotoshopPicker />
         </Col>
         <Col span={12}>col-12</Col>
       </Row>
