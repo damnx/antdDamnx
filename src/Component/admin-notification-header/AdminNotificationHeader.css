@@ -1,12 +1,9 @@
 .antd-pro-components-notice-icon-index-noticeButton {
     cursor: pointer;
-    padding: 10px 20px 10px 5px;
+    padding: 0 10px;
     display: inline-block;
-    -webkit-transition: all .3s;
     transition: all .3s;
     height: 100%;
-    margin-right: 10px;
-    float: left;
 }
 .antd-pro-components-notice-icon-index-noticeButton:hover{
     background: rgba(0,0,0,.025);
@@ -25,4 +22,6 @@ padding: 4px
 
 .ant-damnx-badge .ant-badge-count{
     font-size: 10px;
+    background: red;
+    box-shadow: none;
 }

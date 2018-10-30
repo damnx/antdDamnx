@@ -3,7 +3,7 @@
 }
 
 #ant-damnx-header .antd-damnx-components-top-nav-header-index-logo {
-    width: 165px;
+    width: auto;
     height: 64px;
     position: relative;
     line-height: 64px;
@@ -36,8 +36,9 @@
     float: left;
 }
 .ant-damnx-header-mobile {
-    background: #ffff !important;
+    background: #ffff;
     box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    padding: 0px 10px
 }
 .ant-damnx-header-mobile .antd-damnx-components-header-index-header{
     box-shadow: none
@@ -50,4 +51,10 @@
     width: 100%;
     z-index: 9;
     transition: width .2s;
+}
+
+.antd-damnx-components-global-header-index-right {
+    float: right;
+    overflow: hidden;
+    height: 64px;
 }

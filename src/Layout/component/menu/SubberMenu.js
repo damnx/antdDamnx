@@ -48,7 +48,6 @@ class SubberMenu extends Component {
 
     render() {
         let { mode, navigationMode, isMobile } = this.props;
-        console.log(isMobile);
         let pathname = this.props.location.pathname;
         return (
             <Menu

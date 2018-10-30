@@ -4,12 +4,6 @@ import './AdminNotificationHeader.css'
 import ContentPopoverAdminHeader from '../content-popover-admin-header';
 import { notification } from '../../Api';
 
-const text = ({ data }) => {
-    return;
-}
-const content = () => {
-    return
-}
 class AdminNotificationHeader extends Component {
     constructor(props) {
         super(props);
@@ -49,7 +43,7 @@ class AdminNotificationHeader extends Component {
                 >
                     <Badge
                         count={99}
-                        overflowCount={10}
+                        overflowCount={0}
                         className='ant-damnx-badge'
                         onClick={this.onClick}
                     >

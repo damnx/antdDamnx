@@ -92,7 +92,7 @@ class PageStyleSetting extends Component {
             vars = {
                 '@primary-color': '#1890ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',
-                '@text-color-secondary': '#eb2f96',
+                // '@text-color-secondary': '#eb2f96',
                 '@heading-color': 'rgba(0, 0, 0, 0.65)',
                 '@layout-header-background': '#fff',
                 '@layout-sider-background': '#001529',
@@ -104,7 +104,7 @@ class PageStyleSetting extends Component {
             vars = {
                 '@primary-color': '#1890ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',
-                '@text-color-secondary': '#eb2f96',
+                // '@text-color-secondary': '#eb2f96',
                 '@heading-color': 'rgba(0, 0, 0, 0.65)',
                 '@layout-header-background': '#fff',
                 '@layout-sider-background': '#001529',
@@ -116,7 +116,7 @@ class PageStyleSetting extends Component {
             vars = {
                 '@primary-color': '#1890ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',
-                '@text-color-secondary': '#eb2f96',
+                // '@text-color-secondary': '#eb2f96',
                 '@heading-color': '#fff',
                 '@layout-header-background': '#001529',
                 '@layout-sider-background': '#001529',
@@ -128,7 +128,7 @@ class PageStyleSetting extends Component {
             vars = {
                 '@primary-color': '#1890ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',
-                '@text-color-secondary': '#eb2f96',
+                // '@text-color-secondary': '#eb2f96',
                 '@heading-color': 'rgba(0, 0, 0, 0.65)',
                 '@layout-header-background': '#fff',
                 '@layout-sider-background': '#fff',

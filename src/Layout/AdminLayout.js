@@ -47,11 +47,12 @@ const AdminLayout = (Component) => {
             let initialValue = {
                 '@primary-color': '#1890ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',
-                '@text-color-secondary': '#eb2f96',
+                // '@text-color-secondary': '#eb2f96',
                 '@heading-color': 'rgba(0, 0, 0, 0.65)',
                 '@layout-header-background': '#fff',
                 '@layout-sider-background': '#001529',
                 '@secondary-color': '#fff',
+                '@body-bg':'#001529',
             };
             let vars = LocalStorage.get('app-theme') ? LocalStorage.get('app-theme') : initialValue;
             this.setState({
@@ -60,7 +61,7 @@ const AdminLayout = (Component) => {
                 initialValue,
                 contentWidth: contentWidth,
             }, () => {
-                // this.modifyVarsChange(vars);
+                this.modifyVarsChange(vars);
             })
 
         }
@@ -112,7 +113,7 @@ const AdminLayout = (Component) => {
                             fixedHeader={fixedHeader}
                             {...this.props}
                         />
-                        <Layout style={{ margin: '24px 24px 0px', padding: '0px' }}>
+                        <Layout className='layout-content'>
                             <Content
                                 className={contentWidth === 'fluid' ? 'ant-damnx-content-fluid' : 'ant-damnx-content-fixed'}
                                 style={
@@ -177,7 +178,7 @@ const AdminLayout = (Component) => {
             window.less
                 .modifyVars(vars)
                 .then(() => {
-                    message.success(`Theme updated successfully`);
+                    // message.success(`Theme updated successfully`);
                     localStorage.setItem("app-theme", JSON.stringify(vars));
                 })
                 .catch(error => {
@@ -205,7 +206,7 @@ const AdminLayout = (Component) => {
                 vars = {
                     '@primary-color': '#1890ff',
                     '@text-color': 'rgba(0, 0, 0, 0.65)',
-                    '@text-color-secondary': '#eb2f96',
+                    // '@text-color-secondary': '#eb2f96',
                     '@heading-color': 'rgba(0, 0, 0, 0.65)',
                     '@layout-header-background': '#fff',
                     '@layout-sider-background': '#001529',
@@ -217,7 +218,7 @@ const AdminLayout = (Component) => {
                 vars = {
                     '@primary-color': '#1890ff',
                     '@text-color': 'rgba(0, 0, 0, 0.65)',
-                    '@text-color-secondary': '#eb2f96',
+                    // '@text-color-secondary': '#eb2f96',
                     '@heading-color': 'rgba(0, 0, 0, 0.65)',
                     '@layout-header-background': '#fff',
                     '@layout-sider-background': '#001529',
@@ -229,7 +230,7 @@ const AdminLayout = (Component) => {
                 vars = {
                     '@primary-color': '#1890ff',
                     '@text-color': 'rgba(0, 0, 0, 0.65)',
-                    '@text-color-secondary': '#eb2f96',
+                    // '@text-color-secondary': '#eb2f96',
                     '@heading-color': '#fff',
                     '@layout-header-background': '#001529',
                     '@layout-sider-background': '#001529',

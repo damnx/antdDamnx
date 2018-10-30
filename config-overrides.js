@@ -18,6 +18,7 @@ const options = {
     '@layout-header-background',
     '@btn-primary-bg',
     '@layout-sider-background',
+    '@body-bg',
   ],
   indexFileName: 'index.html',
   generateOnce: false
@@ -32,7 +33,8 @@ module.exports = function override(config, env) {
     modifyVars: {
       "@primary-color": "#1DA57A",
       "@layout-sider-background": "#f5222d",
-      "@secondary-color":"#fff",
+      "@secondary-color": "#fff",
+      "@body-bg": "#000",
     },
     javascriptEnabled: true,
   })(config, env);

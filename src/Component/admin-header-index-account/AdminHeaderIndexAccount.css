@@ -4,11 +4,19 @@
     display: inline-block;
     transition: all .3s;
     height: 100%;
-    float: left;
 }
 
 .antd-damnx-header-index-account:hover{
     background: rgba(0,0,0,.025);
+}
+
+.antd-damnx-header-index-account .ant-avatar-image {
+    width: 25px;
+    height: 25px;
+}
+
+.antd-damnx-components-global-header-index-name{
+    padding: 0px 5px
 }
 
 @media only screen and (max-width: 768px){
