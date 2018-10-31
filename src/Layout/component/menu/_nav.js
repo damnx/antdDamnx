@@ -18,26 +18,26 @@ export default [
 
                 id: "2.1",
                 name: "Dashboard",
-                route: "/damnx",
+                route: "/damnxsssss",
                 parentId: '2'
             },
             {
                 id: "2.2",
-                name: "highCharts",
-                route: "/ac",
+                name: "Chartsas",
+                route: "/damnxsss",
                 parentId: '2'
             },
             {
                 icon: "area-chart",
                 id: "2.3",
-                name: "Rechartst",
+                name: "chartst",
                 route: "/chart/Recharts",
                 parentId: '2',
                 children: [
                     {
                         id: "2.3.1",
                         name: "damnx",
-                        route: "/damnxss",
+                        route: "/damnxs",
                         parentId: '2.3'
                     },
                     {
@@ -79,8 +79,8 @@ export default [
                 children: [
                     {
                         id: "3.3.1",
-                        name: "damnx",
-                        route: "/damnxss",
+                        name: "oke 123",
+                        route: "/damnx",
                         parentId: '3.3'
                     },
                     {

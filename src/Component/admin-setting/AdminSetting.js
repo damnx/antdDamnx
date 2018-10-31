@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Drawer, Icon, Divider, Spin } from 'antd';
+import { Drawer, Icon, Divider } from 'antd';
 import './AdminSetting.css';
 import BlockChecbox from '../admin-setting/component/block-checbox';
 import * as CONST from '../../config/constant';

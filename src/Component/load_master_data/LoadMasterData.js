@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import loading from './swat.gif';
+import LocalStorage from '../../utils/LocalStorage';
 
 export default class LoadMasterData extends Component {
     constructor(props) {
@@ -8,6 +9,7 @@ export default class LoadMasterData extends Component {
             isLoading: true
         };
         this.loading();
+        this.checkLang();
     }
 
     loading = () => {
@@ -16,6 +18,12 @@ export default class LoadMasterData extends Component {
                 isLoading: false
             });
         }, 1950);
+    }
+
+    checkLang = () => {
+        if (!LocalStorage.get("lang")) {
+            LocalStorage.set("lang", "vi");
+        }
     }
 
     render() {

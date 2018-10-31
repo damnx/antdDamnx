@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Radio } from 'antd';
 import './PageStyleSetting.css';
 import CustomPageStyleSetting from './CustomPageStyleSetting'
+import { Lang } from '../../../../utils';
 
 class PageStyleSetting extends Component {
     constructor(props) {
@@ -15,9 +16,9 @@ class PageStyleSetting extends Component {
         return (
             <div className='admin-setting-page-style-setting'>
                 <Row className='page-style-setting'>
-                    <h3 className='antd-damnx-setting-drawer-index-content-page-style-setting'>Page style setting</h3>
+                    <h3 className='antd-damnx-setting-drawer-index-content-page-style-setting'>{Lang.trans('page_style_setting')}</h3>
                     <Col className="page-style-setting-iteam-title" span={12}>
-                        Style
+                        {Lang.trans('style')}
                     </Col>
                     <Col className="page-style-setting-iteam-action" span={12}>
                         <Radio.Group size='small' defaultValue={style} onChange={(e) => this.onChange(e.target.value)}>
@@ -100,7 +101,7 @@ class PageStyleSetting extends Component {
             }
         }
 
-        if (blockChecbox === 'siderMenu' && value === 'dark' && !isMobile ) {
+        if (blockChecbox === 'siderMenu' && value === 'dark' && !isMobile) {
             vars = {
                 '@primary-color': '#1890ff',
                 '@text-color': 'rgba(0, 0, 0, 0.65)',

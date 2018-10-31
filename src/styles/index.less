@@ -1,5 +1,6 @@
 @import "variables";
 @import "./components/dashboard.less";
+
 .antd-damnx-components-setting-drawer-index-handle {
   background: @primary-color
 }
@@ -14,142 +15,12 @@
   color: @heading-color;
 }
 
-.damnx-topMenu-menu {
-  color: @heading-color;
-}
-
-.damnx-siderMenu-menu {
-  color: @secondary-color;
-}
-
-.damnx-menu-mobile {
-  color: @secondary-color;
-}
-
-.damnx-topMenu-menu > .ant-menu-item > a {
-  color: @heading-color;
-}
-
-.damnx-siderMenu-menu > .ant-menu-item > a{
-  color: @secondary-color;
-}
-
-.damnx-menu-mobile > .ant-menu-item > a{
-  color: @secondary-color;
-}
-
-.damnx-topMenu-sub-menu .ant-menu {
-  background-color:@layout-header-background;
-  color: @heading-color;
-}
-
-.ant-menu-submenu-placement-bottomLeft .ant-menu{
-  background-color:@layout-header-background;
-  color: @heading-color;
-}
-
-.ant-menu-submenu-placement-bottomLeft .ant-menu-item > a {
-  color: @heading-color;
-}
-
-.ant-menu-submenu-placement-bottomLeft .ant-menu-item-active  {
-  background: @primary-color;
-}
-
-.damnx-siderMenu-sub-menu .ant-menu {
-  background-color: @layout-sider-background;
-  color: @secondary-color;
-}
-
-.damnx-sub-menu-mobile .ant-menu {
-  background-color: @layout-sider-background;
-  color: @secondary-color;
-}
-
-// .damnx-topMenu-sub-menu .ant-menu-item > a:hover {
-//   color: @primary-color;
-// }
-
-.damnx-topMenu-sub-menu .ant-menu-item > a{
-  color: @heading-color;
-}
-
-.damnx-siderMenu-sub-menu .ant-menu-item > a{
-  color: @secondary-color;
-}
-
-.damnx-siderMenu-sub-menu .ant-menu-item:active{
-  background-color: @primary-color;
-}
-
-.damnx-siderMenu-menu .ant-menu-item:active{
-  background-color: @primary-color;
-}
-
-.damnx-siderMenu-menu .ant-menu-item:active > a{
-  color: @secondary-color;
-}
-
-.damnx-sub-menu-mobile .ant-menu-item > a{
-  color: @secondary-color;
-}
-
-
-.damnx-topMenu-sub-menu .ant-menu-item-active  {
-  background: @primary-color;
-}
-
-.damnx-siderMenu-sub-menu .ant-menu-item-active > a  {
-  // background: @layout-sider-background;
-  color: @primary-color
-}
-
-.damnx-siderMenu-sub-menu .ant-menu-item-active {
-  background: @layout-sider-background;
-}
-
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  background-color: @primary-color;
-}
-
-.ant-drawer-mask {
-  background-color: rgba(0, 0, 0, 0.65);
-}
-
 .antd-damnx-components-sider-menu-index-logo h1 {
   color: @secondary-color;
 }
 
-.damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
-  background: @secondary-color;
-}
-
-.damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
-  background: @secondary-color;
-}
-
-.damnx-topMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
-  background: @heading-color;
-}
-
-.damnx-topMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
-  background: @heading-color;
-}
-
 .antd-damnx-components-header-index-trigger {
   color: @heading-color;
-}
-
-.damnx-menu-mobile .ant-menu-submenu-selected {
-  color: @primary-color;
-}
-
-.damnx-siderMenu-menu .ant-menu-submenu-selected {
-  color: @primary-color;
-}
-
-.damnx-siderMenu-menu .ant-menu-item-active > a{
-  color: @primary-color;
 }
 
 .ant-damnx-badge {
@@ -194,3 +65,174 @@
 .select-lang-admin-header-index-search-icon {
   color: @heading-color;
 }
+
+//topMenu
+.damnx-topMenu-menu {
+  color: @heading-color;
+}
+
+.damnx-topMenu-menu > .ant-menu-item > a {
+  color: @heading-color;
+}
+
+.ant-menu-submenu-placement-bottomLeft .ant-menu{
+  background-color:@layout-header-background;
+  color: @heading-color;
+}
+
+.ant-menu-submenu-placement-bottomLeft .ant-menu-item > a {
+  color: @heading-color;
+}
+
+.ant-menu-submenu-placement-bottomLeft .ant-menu-item-active  {
+  background: @primary-color;
+}
+
+.ant-menu:not(.damnx-topMenu-menu) .ant-menu-item-selected {
+  background: @primary-color;
+}
+
+
+//topMenu-sub
+.damnx-topMenu-sub-menu .ant-menu {
+  background-color:@layout-header-background;
+  color: @heading-color;
+}
+.damnx-topMenu-sub-menu .ant-menu-item > a{
+  color: @heading-color;
+}
+
+.damnx-topMenu-sub-menu .ant-menu-item-active  {
+  background: @primary-color;
+}
+
+.damnx-topMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
+  background: @heading-color;
+}
+
+.damnx-topMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
+  background: @heading-color;
+}
+
+
+
+
+//menu-mobile
+.damnx-menu-mobile {
+  color: @secondary-color;
+}
+
+.damnx-menu-mobile > .ant-menu-item > a{
+  color: @secondary-color;
+}
+
+.damnx-menu-mobile .ant-menu-submenu-selected {
+  color: @primary-color;
+}
+
+//sub-menu-mobile
+.damnx-sub-menu-mobile .ant-menu {
+  background-color: @layout-sider-background;
+  color: @secondary-color;
+}
+
+.damnx-sub-menu-mobile .ant-menu-item > a{
+  color: @secondary-color;
+}
+
+
+//siderMenu-menu
+.damnx-siderMenu-menu .ant-menu {
+  background-color:@layout-header-background;
+  color:@secondary-color;
+}
+.damnx-siderMenu-menu .ant-menu-item > a{
+  color: @secondary-color;
+}
+
+.damnx-siderMenu-menu .ant-menu-item-active  {
+  background: @primary-color;
+}
+
+
+// .damnx-siderMenu-menu {
+//   color: @secondary-color;
+// }
+
+// .damnx-siderMenu-menu > .ant-menu-item{
+//   color: @secondary-color;
+// }
+
+// .damnx-siderMenu-menu >.ant-menu-item-active >a {
+//   color:@primary-color;
+// }
+
+// .damnx-siderMenu-menu .ant-menu-item:active{
+//   background-color: @primary-color;
+// }
+
+// .damnx-siderMenu-menu >.ant-menu-item:active > a{
+//   color: @primary-color;
+// }
+
+// .damnx-siderMenu-menu .ant-menu-item > a{
+//   color: @secondary-color;
+// }
+
+
+//siderMenu-sub
+.damnx-siderMenu-sub-menu {
+  color:@secondary-color;
+}
+.damnx-siderMenu-sub-menu .ant-menu {
+  background-color:@layout-sider-background;
+  color:@secondary-color;
+}
+.damnx-siderMenu-sub-menu .ant-menu-item > a{
+  color: @secondary-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-item-active  {
+  background: @primary-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
+  background: @secondary-color;
+}
+
+.damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
+  background: @secondary-color;
+}
+
+.damnx-siderMenu-menu .ant-menu-submenu-selected .ant-menu-submenu-title{
+  color:@primary-color;
+}
+// .damnx-siderMenu-sub-menu .ant-menu {
+//   background-color: @layout-sider-background;
+//   color: @secondary-color;
+// }
+
+// .damnx-siderMenu-sub-menu .ant-menu-item > a{
+//   color: @secondary-color;
+// }
+
+// .damnx-siderMenu-sub-menu .ant-menu-item:active{
+//   background-color: @primary-color;
+// }
+
+// .damnx-siderMenu-sub-menu .ant-menu-item-active > a  {
+//   // background: @layout-sider-background;
+//   color: @primary-color
+// }
+
+// .damnx-siderMenu-sub-menu .ant-menu-item-active {
+//   background: @layout-sider-background;
+// }
+
+// .damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::after{
+//   background: @secondary-color;
+// }
+
+// .damnx-siderMenu-sub-menu .ant-menu-submenu-title .ant-menu-submenu-arrow::before{
+//   background: @secondary-color;
+// }
