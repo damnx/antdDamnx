@@ -1,11 +1,49 @@
 .antd-damnx-components-header-search-index-headerSearch{
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 0 10px;
     display: inline-block;
     transition: all .3s;
     height: 100%;
-    float: left;
 }
-.antd-damnx-components-header-search-index-headerSearch:hover{
-    background: rgba(0,0,0,.025);
+
+.antd-damnx-components-header-search-index-headerSearch .antd-damnx-components-header-search-index-input {
+    transition: width .3s,margin-left .3s;
+    width: 0;
+    background: transparent;
+    border-radius: 0;
+    display:inline-block
 }
+
+.antd-damnx-components-header-search-index-headerSearch .show-search-input {
+    width: 150px;
+ 
+}
+
+.antd-damnx-components-header-search-index-headerSearch .input-ant-damnx-header-search {
+    padding: 0px;
+    border: none ;
+    margin: 0;
+    background-color:transparent;
+  
+}
+
+.antd-damnx-components-header-search-index-headerSearch .input-ant-damnx-header-search:focus{
+    box-shadow: none 
+}
+
+.antd-damnx-components-header-search-index-headerSearch  .show-search-input .input-ant-damnx-header-search {
+    border-radius: 0;
+}
+
+.show-search-input .input-ant-damnx-header-search:focus{
+    box-shadow:none
+}
+
+.show-search-input .input-ant-damnx-header-search:hover{
+    box-shadow:none
+}
+
+.show-search-input {
+    padding: 0px 10px;
+}
+

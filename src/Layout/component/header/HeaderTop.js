@@ -6,6 +6,7 @@ import IconSider from '../header/component/IconSider';
 import LogoNavMenu from './component/LogoNavMenu';
 import AdminNotificationHeader from '../../../Component/admin-notification-header/AdminNotificationHeader';
 import AdminHeaderIndexAccount from '../../../Component/admin-header-index-account/AdminHeaderIndexAccount';
+import AdminHeaderIndexSearch from '../../../Component/admin-header-index-search/AdminHeaderIndexSearch';
 
 const { Header, Content } = Layout;
 
@@ -43,6 +44,7 @@ class HeaderTop extends Component {
                         {this.renderSubberMenu(navigationMode, isMobile)}
                     </div>
                     <div className='antd-damnx-components-global-header-index-right'>
+                        <AdminHeaderIndexSearch />
                         <AdminNotificationHeader />
                         <AdminHeaderIndexAccount />
                     </div>
@@ -93,6 +95,7 @@ class HeaderTop extends Component {
                     navigationMode={navigationMode}
                     {...this.props}
                 />
+
             );
         }
 

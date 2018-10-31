@@ -56,7 +56,8 @@ class SubberMenu extends Component {
                 style={{
                     lineHeight: '63px',
                     background: 'transparent',
-                    border: 'transparent'
+                    border: 'transparent',
+                    maxWidth:'715px'
                 }}
                 defaultSelectedKeys={currentMenu}
                 className={isMobile ? ('damnx-menu-mobile') : ('damnx-' + navigationMode + '-menu')}
