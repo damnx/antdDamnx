@@ -34,6 +34,7 @@ const AdminLayout = (Component) => {
         }
 
         componentWillMount() {
+            
             let { isMobile, contentWidth, navigationMode, fixedHeader, fixedSidebar, style } = this.state;
             if (isMobile || navigationMode === 'siderMenu') {
                 contentWidth = 'fluid'

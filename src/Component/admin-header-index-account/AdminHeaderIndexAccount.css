@@ -13,6 +13,7 @@
 .antd-damnx-header-index-account .ant-avatar-image {
     width: 25px;
     height: 25px;
+    margin-top: -10px;
 }
 
 .antd-damnx-components-global-header-index-name{

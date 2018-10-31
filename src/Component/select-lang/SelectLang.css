@@ -1,0 +1,11 @@
+.select-lang-admin-header-index-search {
+    cursor: pointer;
+    padding: 0 10px;
+    display: inline-block;
+    transition: all .3s;
+    height: 100%;
+}
+
+.select-lang-admin-header-index-search-icon{
+    font-size: 20px !important
+}

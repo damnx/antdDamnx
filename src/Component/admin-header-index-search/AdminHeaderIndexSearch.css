@@ -15,7 +15,7 @@
 }
 
 .antd-damnx-components-header-search-index-headerSearch .show-search-input {
-    width: 150px;
+    width: 210px;
  
 }
 
@@ -46,4 +46,14 @@
 .show-search-input {
     padding: 0px 10px;
 }
+
+
+@media only screen and (max-width: 768px){
+    .antd-damnx-components-global-header-index-right{
+        position: absolute;
+        right: 12px;
+        top: 0;
+    }
+}
+
 

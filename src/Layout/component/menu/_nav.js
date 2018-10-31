@@ -150,8 +150,8 @@ export default [
     {
         id: "8",
         icon: "code-o",
-        name: "Dashboard",
-        route: "/dd",
+        name: "oke",
+        route: "/oke",
         parentId: '0'
     },
 ]

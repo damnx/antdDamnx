@@ -7,6 +7,7 @@ import LogoNavMenu from './component/LogoNavMenu';
 import AdminNotificationHeader from '../../../Component/admin-notification-header/AdminNotificationHeader';
 import AdminHeaderIndexAccount from '../../../Component/admin-header-index-account/AdminHeaderIndexAccount';
 import AdminHeaderIndexSearch from '../../../Component/admin-header-index-search/AdminHeaderIndexSearch';
+import SelectLang from '../../../Component/select-lang/SelectLang';
 
 const { Header, Content } = Layout;
 
@@ -29,8 +30,10 @@ class HeaderTop extends Component {
                                 width: 'calc(100% - 80px)'
                             } : isMobile ? {
                                 padding: '0px 10px',
-                            } : {
-                                    padding: 0,
+                            } : navigationMode === 'topMenu' && contentWidth==='fluid' && !isMobile  ?{
+                                    padding: '0px 24px',
+                                }:{
+                                    padding:0
                                 }
                 }
                 className={
@@ -47,6 +50,7 @@ class HeaderTop extends Component {
                         <AdminHeaderIndexSearch />
                         <AdminNotificationHeader />
                         <AdminHeaderIndexAccount />
+                        <SelectLang />
                     </div>
                 </Content>
             </Header >

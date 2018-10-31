@@ -43,6 +43,19 @@
   color: @heading-color;
 }
 
+.ant-menu-submenu-placement-bottomLeft .ant-menu{
+  background-color:@layout-header-background;
+  color: @heading-color;
+}
+
+.ant-menu-submenu-placement-bottomLeft .ant-menu-item > a {
+  color: @heading-color;
+}
+
+.ant-menu-submenu-placement-bottomLeft .ant-menu-item-active  {
+  background: @primary-color;
+}
+
 .damnx-siderMenu-sub-menu .ant-menu {
   background-color: @layout-sider-background;
   color: @secondary-color;
@@ -65,6 +78,18 @@
   color: @secondary-color;
 }
 
+.damnx-siderMenu-sub-menu .ant-menu-item:active{
+  background-color: @primary-color;
+}
+
+.damnx-siderMenu-menu .ant-menu-item:active{
+  background-color: @primary-color;
+}
+
+.damnx-siderMenu-menu .ant-menu-item:active > a{
+  color: @secondary-color;
+}
+
 .damnx-sub-menu-mobile .ant-menu-item > a{
   color: @secondary-color;
 }
@@ -74,27 +99,18 @@
   background: @primary-color;
 }
 
-.damnx-siderMenu-sub-menu .ant-menu-item-active  {
-  background: @layout-sider-background;
+.damnx-siderMenu-sub-menu .ant-menu-item-active > a  {
+  // background: @layout-sider-background;
+  color: @primary-color
 }
 
-.damnx-siderMenu-sub-menu .ant-menu-inline{
-  // background: fade(@layout-sider-background, 5%);
-  
+.damnx-siderMenu-sub-menu .ant-menu-item-active {
+  background: @layout-sider-background;
 }
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: @primary-color;
 }
-
-// .damnx-topMenu-sub-menu .ant-menu-item-active ,.ant-menu-item:hover{
-//   color: @primary-color;
-// }
-
-// .damnx-topMenu-sub-menu .ant-menu-item > a:active {
-//   background-color: @primary-color;
-//   width: 100%;
-// }
 
 .ant-drawer-mask {
   background-color: rgba(0, 0, 0, 0.65);
@@ -129,6 +145,10 @@
 }
 
 .damnx-siderMenu-menu .ant-menu-submenu-selected {
+  color: @primary-color;
+}
+
+.damnx-siderMenu-menu .ant-menu-item-active > a{
   color: @primary-color;
 }
 
@@ -167,3 +187,10 @@
   border-color: @heading-color;
 }
 
+.antd-damnx-components-global-header-index-right{
+  background-color: @layout-header-background
+}
+
+.select-lang-admin-header-index-search-icon {
+  color: @heading-color;
+}
