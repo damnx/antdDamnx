@@ -1,0 +1,114 @@
+.user-login {
+    height: 100%;
+    background: url('http://react-material.fusetheme.com/assets/images/backgrounds/dark-material-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+}
+
+.div-hidden {
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0.6s, visibility 0.6s;
+}
+.div-show {
+    opacity :1;
+    visibility: visible;
+    transition:opacity 0.6s, visibility 0.6s;
+}
+.user-login-right {
+    background: #fff;
+    height: 100vh;
+    padding: 12.8rem 2rem;
+    
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow:auto;
+    /* background: #fff;
+    height: 100%;
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0.4s, visibility 0.4s;
+    padding: 12.8rem 5rem;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto; */
+
+    /* display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 12.8rem 5rem; */
+}
+
+.user-login-left {
+    padding: 12.8rem;
+}
+.user-login-right-title {
+    font-size: 20px;
+    color: rgba(0,0,0,.85);
+    font-family: Myriad Pro,Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+    text-align: center
+}
+
+.user-login-right-tabs .ant-tabs-bar {
+    border: none;
+}
+
+.user-login-right-tabs-tabpane {
+    padding: 0px 16px;
+}
+.user-login-left-logo {
+    width: 80px;
+    margin-bottom: 15px
+}
+
+.user-login-left-logo-title {
+    color: #ffffff;
+    font-size: 35px;
+    font-family: Muli,Roboto,"Helvetica",Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.04;
+}
+
+.user-login-left-description {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: Muli,Roboto,"Helvetica",Arial,sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+    .user-login-left {
+        padding: 40px;
+    }
+    .user-login-right {
+        padding: 40px 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+  .user-login .ant-row {
+      padding: 0px 15px
+  }
+  .user-login-left-logo-title {
+      font-size: 20px
+ }
+ .user-login-left-description {
+     display: none
+ }
+
+ .user-login-left {
+    padding: 20px;
+ }
+ .user-login-right {
+     height: auto;
+ }
+}

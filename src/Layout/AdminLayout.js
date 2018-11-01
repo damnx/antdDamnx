@@ -10,7 +10,7 @@ import { enquireScreen, unenquireScreen } from 'enquire-js';
 
 const { Content, Footer } = Layout;
 
-const AdminLayout = (Component) => {
+const AdminLayout = (Component,type) => {
     return class extends React.Component {
         constructor(props) {
             super(props);

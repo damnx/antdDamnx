@@ -3,13 +3,17 @@ import AdminLayout from './Layout/AdminLayout';
 import { Row, Col } from 'antd';
 import { SketchPicker, PhotoshopPicker } from 'react-color';
 
+const type = {
+  a: 123
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
 
   }
   render() {
-    
+
     return (
       <Row>
         <Col span={12}>
@@ -22,4 +26,4 @@ class App extends Component {
 }
 
 
-export default AdminLayout(App);
+export default AdminLayout(App,type);
