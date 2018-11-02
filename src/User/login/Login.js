@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WithLayout from '../../Layout/WithLayout';
 import './Login.css';
+import '../../User/stylesUser.css'
 import { Tabs, Row, Col } from 'antd';
 import Credenciais from '../login/component/credenciais';
 import Telefone from '../login/component/telefone';
@@ -25,7 +26,7 @@ class Login extends Component {
     render() {
         let { visible } = this.state;
         return (
-            <div className='user-login'>
+            <div className='user-content'>
                 <Row>
                     <Col className={visible ? 'div-show user-login-left' : 'div-hidden user-login-right'} xs={24} sm={24} md={14} lg={14} xl={18}>
                         <img className="user-login-left-logo" src="http://react-material.fusetheme.com/assets/images/logos/fuse.svg" alt="logo" />

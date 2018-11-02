@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import './Credenciais.css';
+import LoginFormFooter from '../../component/login-form-footer/LoginFormFooter';
 
 const FormItem = Form.Item;
 
@@ -57,8 +58,9 @@ class Credenciais extends Component {
                     <a className="login-form-forgot" href="">Forgot password</a>
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Log in
-              </Button>
+                </Button>
                     Or <a href="">register now!</a>
+                    <LoginFormFooter />
                 </FormItem>
             </Form>
         );

@@ -6,7 +6,8 @@ export default class LoadMasterData extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoading: true
+            isLoading: true,
+           
         };
         this.loading();
         this.checkLang();
@@ -15,7 +16,8 @@ export default class LoadMasterData extends Component {
     loading = () => {
         setTimeout(() => {
             this.setState({
-                isLoading: false
+                isLoading: false,
+              
             });
         }, 1950);
     }
@@ -28,10 +30,10 @@ export default class LoadMasterData extends Component {
 
     render() {
         let Component = this.props.component;
-        let isLoading = this.state.isLoading;
+        let {isLoading} = this.state;
         if (!isLoading) {
             return (
-                <Component {...this.props} />
+                <Component  {...this.props} />
             )
         }
         return (

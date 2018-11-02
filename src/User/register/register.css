@@ -1,13 +1,4 @@
-.user-login {
-    height: 100%;
-    background: url('http://react-material.fusetheme.com/assets/images/backgrounds/dark-material-bg.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: auto;
-}
+
 
 .div-hidden {
     opacity:0;
@@ -19,7 +10,7 @@
     visibility: visible;
     transition:opacity 0.6s, visibility 0.6s;
 }
-.user-login-right {
+.user-register-right {
     background: #fff;
     height: 100vh;
     padding: 120px 20px;
@@ -29,10 +20,10 @@
     overflow:auto;
 }
 
-.user-login-left {
+.user-register-left {
     padding: 120px;
 }
-.user-login-right-title {
+.user-register-right-title {
     font-size: 20px;
     color: rgba(0,0,0,.85);
     font-family: Myriad Pro,Helvetica Neue,Arial,Helvetica,sans-serif;
@@ -42,19 +33,19 @@
     text-align: center
 }
 
-.user-login-right-tabs .ant-tabs-bar {
+.user-register-right-tabs .ant-tabs-bar {
     border: none;
 }
 
-.user-login-right-tabs-tabpane {
+.user-register-right-tabs-tabpane {
     padding: 0px 16px;
 }
-.user-login-left-logo {
+.user-register-left-logo {
     width: 80px;
     margin-bottom: 15px
 }
 
-.user-login-left-logo-title {
+.user-register-left-logo-title {
     color: #ffffff;
     font-size: 35px;
     font-family: Muli,Roboto,"Helvetica",Arial,sans-serif;
@@ -62,50 +53,50 @@
     line-height: 1.04;
 }
 
-.user-login-left-description {
+.user-register-left-description {
     color: #ffffff;
     font-size: 15px;
     font-family: Muli,Roboto,"Helvetica",Arial,sans-serif;
 }
 
 @media only screen and (max-width: 1200px) {
-    .user-login-left {
+    .user-register-left {
         padding: 40px;
     }
-    .user-login-right {
+    .user-register-right {
         padding: 40px 10px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-  .user-login .ant-row {
+  .user-register .ant-row {
       padding: 0px 15px
   }
-  .user-login-left-logo-title {
+  .user-register-left-logo-title {
       font-size: 20px
  }
- .user-login-left-description {
+ .user-register-left-description {
      display: none
  }
 
- .user-login-left {
+ .user-register-left {
     padding: 20px;
  }
- .user-login-right {
+ .user-register-right {
      height: auto;
  }
 }
-.user-login-login-form-footer {
+.user-register-register-form-footer {
     width: 100%;
     text-align: center
 }
 
-.user-login-login-form-footer span {
+.user-register-register-form-footer span {
    float: left;
    width: 100%;
 }
 
-.user-login-login-form-footer a {
+.user-register-register-form-footer a {
     float: left;
     width: 100%;
  }

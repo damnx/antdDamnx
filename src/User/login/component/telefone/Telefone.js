@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox, InputNumber } from 'antd';
+import LoginFormFooter from '../../component/login-form-footer/LoginFormFooter';
 import './Telefone.css';
 
 const FormItem = Form.Item;
@@ -12,7 +13,7 @@ class Telefone extends Component {
 
     }
 
-   
+
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -23,15 +24,15 @@ class Telefone extends Component {
         });
     }
 
-   
+
 
     render() {
         const { getFieldDecorator, } = this.props.form;
-      
+
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
                 <FormItem
-                  
+
                 >
 
                     {getFieldDecorator('phone_number', {
@@ -51,7 +52,7 @@ class Telefone extends Component {
                 </FormItem>
 
                 <FormItem
-                
+
                 >
                     {getFieldDecorator('code', {
                         rules: [
@@ -81,6 +82,10 @@ class Telefone extends Component {
                         Log in
                     </Button>
                     Or <a href="">register now!</a>
+                    <LoginFormFooter />
+                </FormItem>
+                <FormItem>
+
                 </FormItem>
             </Form>
         );
