@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './ContentWidth.css';
-import { Button, Radio } from 'antd';
+import { Radio } from 'antd';
 
 class ContentWidth extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         let { isMobile, blockChecbox, contentWidth } = this.props;
         if (isMobile || blockChecbox === 'siderMenu') {

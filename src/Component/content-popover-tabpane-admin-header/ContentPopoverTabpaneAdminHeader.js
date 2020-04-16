@@ -3,12 +3,6 @@ import { List, Avatar } from 'antd';
 import './ContentPopoverTabpaneAdminHeader.css'
 
 class ContentPopoverTabpaneAdminHeader extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
-
     render() {
         return (
             <div>

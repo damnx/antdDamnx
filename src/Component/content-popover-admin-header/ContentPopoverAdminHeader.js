@@ -7,10 +7,6 @@ import ContentPopoverTabpaneAdminHeader from '../content-popover-tabpane-admin-h
 const TabPane = Tabs.TabPane;
 
 class TitlePopoverAdminHeader extends Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         let { data, isLoading } = this.props;

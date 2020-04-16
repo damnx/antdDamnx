@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SelectLang.css';
-import { Menu, Dropdown, Icon, message } from 'antd';
+import { Menu, Dropdown, Icon } from 'antd';
 import LocalStorage from '../../utils/LocalStorage';
 
 const defaultSelectedKeys = LocalStorage.get("lang") ? LocalStorage.get("lang") : 'vi';
@@ -34,13 +34,6 @@ const menu = (
 
 
 class SelectLang extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
-
-
     render() {
         return (
             <Dropdown overlay={menu} placement="bottomRight">

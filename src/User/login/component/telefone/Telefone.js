@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Icon, Input, Button, Checkbox, InputNumber } from 'antd';
+import { Form, Input, Button, Checkbox } from 'antd';
 import LoginFormFooter from '../../component/login-form-footer/LoginFormFooter';
 import './Telefone.css';
 
@@ -8,12 +8,7 @@ const FormItem = Form.Item;
 
 
 class Telefone extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
-
+   
 
     handleSubmit = (e) => {
         e.preventDefault();

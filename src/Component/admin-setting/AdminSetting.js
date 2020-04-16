@@ -9,9 +9,6 @@ import PageStyleSetting from '../admin-setting/component/page-style-setting'
 
 
 class AdminSetting extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         let { visible, blockChecbox, isMobile, contentWidth, fixedHeader, fixedSidebar, style, vars } = this.props;

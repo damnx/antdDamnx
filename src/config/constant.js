@@ -22,3 +22,5 @@ export const NAVIGATION_MODE = {
         'name': 'topMenu'
     }
 }
+
+export const PAGESIZE = 20

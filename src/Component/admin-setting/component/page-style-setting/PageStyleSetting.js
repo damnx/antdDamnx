@@ -5,10 +5,6 @@ import CustomPageStyleSetting from './CustomPageStyleSetting'
 import { Lang } from '../../../../utils';
 
 class PageStyleSetting extends Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         let { style, vars } = this.props;
@@ -86,7 +82,7 @@ class PageStyleSetting extends Component {
     }
 
     onChange = (value) => {
-
+        console.log(value)
         let { blockChecbox, vars, isMobile } = this.props;
 
         if (isMobile) {
@@ -109,7 +105,7 @@ class PageStyleSetting extends Component {
                 '@heading-color': 'rgba(0, 0, 0, 0.65)',
                 '@layout-header-background': '#fff',
                 '@layout-sider-background': '#001529',
-                '@secondary-color': '#fff',
+                // '@secondary-color': '#fff',
             }
         }
 
@@ -121,7 +117,7 @@ class PageStyleSetting extends Component {
                 '@heading-color': '#fff',
                 '@layout-header-background': '#001529',
                 '@layout-sider-background': '#001529',
-                '@secondary-color': '#fff',
+                '@secondary-color': 'rgba(0, 0, 0, 0.65)',
             }
         }
 

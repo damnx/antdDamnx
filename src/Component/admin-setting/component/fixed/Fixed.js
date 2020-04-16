@@ -3,11 +3,6 @@ import { Switch } from 'antd';
 import './Fixed.css'
 
 class Fixed extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         let { fixedHeader, title, disabled } = this.props;
 

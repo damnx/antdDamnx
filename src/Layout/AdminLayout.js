@@ -204,27 +204,27 @@ const AdminLayout = (Component,type) => {
         onClickBlockChecbox = (value) => {
             let { vars, style, isMobile } = this.state;
             if (isMobile) {
-                vars = {
-                    '@primary-color': '#1890ff',
-                    '@text-color': 'rgba(0, 0, 0, 0.65)',
-                    // '@text-color-secondary': '#eb2f96',
-                    '@heading-color': 'rgba(0, 0, 0, 0.65)',
-                    '@layout-header-background': '#fff',
-                    '@layout-sider-background': '#001529',
-                    '@secondary-color': '#fff',
-                }
+                // vars = {
+                //     '@primary-color': '#1890ff',
+                //     '@text-color': 'rgba(0, 0, 0, 0.65)',
+                //     // '@text-color-secondary': '#eb2f96',
+                //     '@heading-color': 'rgba(0, 0, 0, 0.65)',
+                //     '@layout-header-background': '#fff',
+                //     '@layout-sider-background': '#001529',
+                //     '@secondary-color': '#fff',
+                // }
             }
 
             if (value === 'siderMenu' && style === 'dark' && !isMobile) {
-                vars = {
-                    '@primary-color': '#1890ff',
-                    '@text-color': 'rgba(0, 0, 0, 0.65)',
-                    // '@text-color-secondary': '#eb2f96',
-                    '@heading-color': 'rgba(0, 0, 0, 0.65)',
-                    '@layout-header-background': '#fff',
-                    '@layout-sider-background': '#001529',
-                    '@secondary-color': '#fff',
-                }
+                // vars = {
+                //     '@primary-color': '#1890ff',
+                //     '@text-color': 'rgba(0, 0, 0, 0.65)',
+                //     // '@text-color-secondary': '#eb2f96',
+                //     '@heading-color': 'rgba(0, 0, 0, 0.65)',
+                //     '@layout-header-background': '#fff',
+                //     '@layout-sider-background': '#001529',
+                //     '@secondary-color': '#fff',
+                // }
             }
 
             if (value === 'topMenu' && style === 'dark' && !isMobile) {

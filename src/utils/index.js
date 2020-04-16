@@ -3,7 +3,7 @@ import vi from '../config/lang/vi/vi';
 import LocalStorage from './LocalStorage';
 
 const CurrentLang = () => {
-    return (LocalStorage.get("lang") == "vi") ? vi : en
+    return (LocalStorage.get("lang") === "vi") ? vi : en
 }
 
 export class Lang {

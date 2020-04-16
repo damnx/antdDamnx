@@ -33,7 +33,7 @@ const getMenus = (nav, pathname, navigationMode, isMobile) => {
                 key={item.id}
             >
                 <Link to={item.route}>
-                    {item.icon && <Icon type="pie-chart" />}
+                    {item.icon && <Icon type={item.icon} />}
                     <span>{item.name}</span>
                 </Link>
             </Menu.Item>
@@ -42,10 +42,6 @@ const getMenus = (nav, pathname, navigationMode, isMobile) => {
 }
 
 class SubberMenu extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let { mode, navigationMode, isMobile } = this.props;
         let pathname = this.props.location.pathname;
@@ -57,7 +53,7 @@ class SubberMenu extends Component {
                     lineHeight: '63px',
                     background: 'transparent',
                     border: 'transparent',
-                    maxWidth:'715px'
+                    maxWidth: '715px'
                 }}
                 defaultSelectedKeys={currentMenu}
                 className={isMobile ? ('damnx-menu-mobile') : ('damnx-' + navigationMode + '-menu')}

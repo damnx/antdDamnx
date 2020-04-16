@@ -12,9 +12,7 @@ import SelectLang from '../../../Component/select-lang/SelectLang';
 const { Header, Content } = Layout;
 
 class HeaderTop extends Component {
-    constructor(props) {
-        super(props);
-    }
+    
     render() {
         let { navigationMode, collapsed, isMobile, contentWidth, fixedHeader } = this.props;
         return (

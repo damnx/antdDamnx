@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import { Layout, Icon, Drawer } from 'antd';
+import { Layout, Drawer } from 'antd';
 import SubberMenu from '../menu/SubberMenu';
 import './SiderAdmin.css';
 
 const { Sider } = Layout;
 
 class SiderAdmin extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let { navigationMode, collapsed, isMobile, fixedSidebar } = this.props;
         if (!isMobile && navigationMode === 'siderMenu') {
@@ -65,7 +61,7 @@ class SiderAdmin extends Component {
                                     display: 'none'
                                 } : null
                             }
-                        >Ant Design Pro</h1>
+                        >quiz</h1>
                     </a>
                 </div>
                 <SubberMenu

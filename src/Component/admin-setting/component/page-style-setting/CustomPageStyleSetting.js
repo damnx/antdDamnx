@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Row } from 'antd';
 import { SketchPicker } from 'react-color'
 import reactCSS from 'reactcss'
 

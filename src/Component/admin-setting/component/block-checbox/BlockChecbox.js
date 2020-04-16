@@ -3,10 +3,6 @@ import './BlockChecbox.css';
 import { Tooltip, Icon } from 'antd';
 
 class BlockChecbox extends Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         let { title } = this.props;
@@ -25,7 +21,7 @@ class BlockChecbox extends Component {
             result.push(
                 <Tooltip key={i} placement="top" title={data[i].title}>
                     <div className='antd-damnx-components-setting-drawer-index-item' onClick={() => this.onClick(i)}>
-                        <img src={data[i].image} />
+                        <img alt="" src={data[i].image} />
                         <div
                             className='antd-damnx-components-setting-drawer-index-selectIcon'
                         >

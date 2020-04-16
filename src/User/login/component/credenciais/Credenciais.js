@@ -8,11 +8,7 @@ const FormItem = Form.Item;
 
 
 class Credenciais extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
+   
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
